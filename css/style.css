@@ -35,7 +35,7 @@ a {
 	z-index: 20;
 }
 
-#header {
+#headerIcon {
 	border: solid 3px;
 	border-color: #DDD;
 	color: #DDD;
@@ -45,6 +45,7 @@ a {
     top:15px;
 	left: 30px;
 	font-size: 20px;
+	font-style: italic; 
 	min-height: 20px;
 	text-align: center;
 	-moz-border-radius: 25px;
@@ -53,6 +54,31 @@ a {
     border-radius: 25px;
 	z-index: 30;
 }
+
+#logo {
+	position: relative;
+	z-index: 30;
+}
+
+#navMenu {
+	width: 400px;
+	height: 40px;
+	margin: 10px;
+	float: right;
+}
+
+ul.list {
+	margin:0; 
+	padding:0;
+}
+.menu li {
+	text-align: center;
+	color: #AAA;
+	float: right; 
+	margin:12px;
+}
+
+
 
 /* #wrapperの設定 */
 #wrapper {
@@ -63,15 +89,8 @@ a {
 	height: 800px;
 }
 
-#logo {
-	position: relative;
-	z-index: 30;
-	
-}
-
 /* メイン部の設定 */
 #main {
-	  text-align:center;
 	  height: 800px;
 	  margin: 70px auto;
 	  padding: 10px 15px;
@@ -90,12 +109,12 @@ a {
 	z-index: 3000;
 }
 
-#atsum {
-	background: url(../images/atsum.png) 0 0 no-repeat;
+#at {
+	background: url(../images/atsum.png) 0 0 no-repeat; 
 }
 
 #fbm {
-	background: url(../images/fbm.png) 0 0 no-repeat;
+	background: url(../images/fbm.png) 0 0 no-repeat; 
 }
 
 .content {
@@ -103,5 +122,11 @@ a {
 	height:130px;
 	margin: 10px;
 	float: left;
+
+	text-align: left;
+	font-size: 10px;
+	font-weight: lighter;
+	
 	border: solid 1px black;
+	background-repeat: no-repeat;
 }
