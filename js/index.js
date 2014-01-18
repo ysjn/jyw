@@ -2,7 +2,7 @@
 
 
 $(function(){
-$("#headerIcon").hide();
+$("#headWrap").hide();
 $("#main").hide();
 
 
@@ -46,7 +46,7 @@ draw();
 		$("#logo").fadeOut("slow",function(){
 			$("#main").fadeIn();
 		});
-		$("#headerIcon").fadeIn(3000);
+		$("#headWrap").fadeIn(3000);
 	}, 3200);
 
 

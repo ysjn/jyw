@@ -6,7 +6,7 @@ body {
 	margin: 0;  
     padding: 0 0 50px 0; 
 	width: 100%;
-	background: #EEE;
+	background: #F5F5F5;
 	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;	font-size: 12px;
  	font-weight: lighter;
 	color: white;
@@ -85,8 +85,8 @@ ul.list {
 	background:white;
 	position: relative;
 	margin: 0 auto;
-	width: 800px;
-	height: 800px;
+	width: 1000px;
+	min-height: 800px;
 }
 
 /* メイン部の設定 */
@@ -118,8 +118,8 @@ ul.list {
 }
 
 .content {
-	width: 200px;
-	height:130px;
+	width: 220px;
+	height:150px;
 	margin: 10px;
 	float: left;
 
@@ -127,6 +127,6 @@ ul.list {
 	font-size: 10px;
 	font-weight: lighter;
 	
-	border: solid 1px black;
+	border: solid 1px #AAA;
 	background-repeat: no-repeat;
 }
