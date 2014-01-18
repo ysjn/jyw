@@ -43,10 +43,10 @@ draw();
 
 	setTimeout(function(){
 		$("#logo").animate({ 'top': '-2px', 'left': '12px', width: '70px', height: '70px', opacity: '0.2'},{duration: 800, easing: "swing"});
-		$("#logo").fadeOut("fast",function(){
+		$("#logo").fadeOut("slow",function(){
 			$("#main").fadeIn();
 		});
-		$("#header").fadeIn(2500);
+		$("#header").fadeIn(3000);
 	}, 3200);
 
 

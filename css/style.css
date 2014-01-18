@@ -6,9 +6,8 @@ body {
 	margin: 0;  
     padding: 0 0 50px 0; 
 	width: 100%;
-	background: transparent;
-	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',
- Meiryo, sans-serif;	font-size: 12px;
+	background: #EEE;
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;	font-size: 12px;
  	font-weight: lighter;
 	color: white;
 }
@@ -57,11 +56,11 @@ a {
 
 /* #wrapperの設定 */
 #wrapper {
+	background:white;
 	position: relative;
 	margin: 0 auto;
 	width: 800px;
 	height: 800px;
-	background: #CFFBFF;
 }
 
 #logo {
@@ -74,16 +73,13 @@ a {
 #main {
 	  text-align:center;
 	  height: 800px;
-	  margin: 100px auto;
-	  
-	  border:solid 1px;
-	border-color: black;	
+	  margin: 70px auto;
 }
 
 
 /* フッタの設定 */
 #footer {
-	color: #DDD;
+	color: #AAA;
 	width: 800px;
 	position: fixed;
 	padding: 0px auto;
