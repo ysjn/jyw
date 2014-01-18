@@ -3,8 +3,10 @@
 
 /* body、aタグの設定 */
 body {
+	margin: 0;  
+    padding: 0 0 50px 0; 
 	width: 100%;
-	background: url(../images/tile1.png);
+	background: transparent;
 	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',
  Meiryo, sans-serif;	font-size: 12px;
  	font-weight: lighter;
@@ -17,16 +19,32 @@ a {
 }
 
 /* フッタの設定 */
-#h {
+#headWrap {
+	position: fixed !important;  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+	height: 60px;
+	background: white;
+    box-shadow: 0 1px 8px #333333;
+    -moz-box-shadow: 0 1px 8px #333333; /* Firefox対応 */
+    -webkit-box-shadow: 0 1px 8px #333333; /* Safari、Chrome対応 */
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* IE7対応 */
+    -ms-filter: "alpha(opacity=90)"; /* IE8対応 */
+	z-index: 20;
+}
+
+#header {
 	border: solid 3px;
-	border-color: #EEE;
-	color: #EEE;
+	border-color: #DDD;
+	color: #DDD;
 	position: fixed;
 	width: 28px;
 	height: 28px;
-    top:30px;
-	left: 50%;
-	margin-left: -25px;
+    top:15px;
+	left: 30px;
 	font-size: 20px;
 	min-height: 20px;
 	text-align: center;
@@ -34,25 +52,38 @@ a {
     -khtml-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
-	z-index: 3000;
+	z-index: 30;
 }
 
 /* #wrapperの設定 */
 #wrapper {
+	position: relative;
 	margin: 0 auto;
 	width: 800px;
+	height: 800px;
+	background: #CFFBFF;
+}
+
+#logo {
+	position: relative;
+	z-index: 30;
+	
 }
 
 /* メイン部の設定 */
 #main {
 	  text-align:center;
-	  margin: 100px auto 100px 25px;
+	  height: 800px;
+	  margin: 100px auto;
+	  
+	  border:solid 1px;
+	border-color: black;	
 }
 
 
 /* フッタの設定 */
 #footer {
-	color: #EEE;
+	color: #DDD;
 	width: 800px;
 	position: fixed;
 	padding: 0px auto;
@@ -62,34 +93,16 @@ a {
 	z-index: 3000;
 }
 
-.box {
-    background-color: #CCC;
-    -moz-border-radius: 25px;
-    -khtml-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    border-radius: 25px;
-    -webkit-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    -moz-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    -ms-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    -o-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
-    -webkit-transition-property: left, right, top;
-    -moz-transition-property: left, right, top;
-    -ms-transition-property: left, right, top;
-    -o-transition-property: left, right, top;
-    transition-property: left, right, top;
-}
-
-.size11 { background: #CFC }
-.size12, .size21, .twocols { background: #CF6 }
-.size31, .size32, .size33, .threecols { background: #9F7 }
-
 #atsum {
+	margin: 0 auto;
 	background: url(../images/atsum.png) 0 0 no-repeat;
-	background-size: 215px 215px;
+	height: 200px;
+	width: 200px;
 }
 
 #fbm {
+	margin: 0 auto;
 	background: url(../images/fbm.png) 0 0 no-repeat;
-	background-size: 215px 212px;
+	height: 200px;
+	width: 200px;
 }
