@@ -1,0 +1,128 @@
+/* 文字コードの指定 */
+@charset "utf-8";
+
+/* body、aタグの設定 */
+body {
+	width: 100%;
+	background: url(../images/tile1.png);
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',
+ Meiryo, sans-serif;	font-size: 12px;
+ 	font-weight: lighter;
+	color: white;
+}
+
+body.noscroll {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* フッタの設定 */
+#h {
+	border: solid 3px;
+	border-color: #EEE;
+	color: #EEE;
+	position: fixed;
+	width: 28px;
+	height: 28px;
+    top:30px;
+	left: 50%;
+	margin-left: -25px;
+	font-size: 20px;
+	min-height: 20px;
+	text-align: center;
+	-moz-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	z-index: 3000;
+}
+
+/* #wrapperの設定 */
+#wrapper {
+	margin: 0 auto;
+	width: 800px;
+}
+
+.wrapbox { 
+  position:rerative;
+  min-width: 800px; 
+  min-height: 600px; 
+ }
+
+#hello {
+	color: #9F7;
+	margin-top: 25%; 
+}
+
+#entrance {
+	color: #CCC;
+	font-size:18px;
+	text-align:center;
+	letter-spacing: 5px;
+	  position: absolute;
+	  width:400px;
+	  height:331px;
+	  margin-left:-200px;
+	  margin-top:-165.5px;
+	  top: 50%;
+	  left: 50%;
+	  
+  background: url(../images/imac.png) 0 0 no-repeat;
+  background-size: 400px 331px;
+}
+
+/* メイン部の設定 */
+#main {
+	  text-align:center;
+	  margin: 100px auto 100px 25px;
+}
+
+
+/* フッタの設定 */
+#footer {
+	color: #EEE;
+	width: 800px;
+	position: fixed;
+	padding: 0px auto;
+    bottom:5px;
+	min-height: 20px;
+	text-align: center;
+	z-index: 3000;
+}
+
+.box {
+    background-color: #CCC;
+    -moz-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    -webkit-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    -moz-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    -ms-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    -o-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+    -webkit-transition-property: left, right, top;
+    -moz-transition-property: left, right, top;
+    -ms-transition-property: left, right, top;
+    -o-transition-property: left, right, top;
+    transition-property: left, right, top;
+}
+
+.size11 { background: #CFC }
+.size12, .size21, .twocols { background: #CF6 }
+.size31, .size32, .size33, .threecols { background: #9F7 }
+
+#atsum {
+	background: url(../images/atsum.png) 0 0 no-repeat;
+	background-size: 215px 215px;
+}
+
+#fbm {
+	background: url(../images/fbm.png) 0 0 no-repeat;
+	background-size: 215px 212px;
+}
