@@ -74,6 +74,7 @@ a {
 	  text-align:center;
 	  height: 800px;
 	  margin: 70px auto;
+	  padding: 10px 15px;
 }
 
 
@@ -90,15 +91,17 @@ a {
 }
 
 #atsum {
-	margin: 0 auto;
 	background: url(../images/atsum.png) 0 0 no-repeat;
-	height: 200px;
-	width: 200px;
 }
 
 #fbm {
-	margin: 0 auto;
 	background: url(../images/fbm.png) 0 0 no-repeat;
-	height: 200px;
+}
+
+.content {
 	width: 200px;
+	height:130px;
+	margin: 10px;
+	float: left;
+	border: solid 1px black;
 }
