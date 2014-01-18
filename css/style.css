@@ -11,11 +11,6 @@ body {
 	color: white;
 }
 
-body.noscroll {
-  position: fixed;
-  overflow-y: hidden;
-}
-
 a {
 	color: white;
 	text-decoration: none;
@@ -46,34 +41,6 @@ a {
 #wrapper {
 	margin: 0 auto;
 	width: 800px;
-}
-
-.wrapbox { 
-  position:rerative;
-  min-width: 800px; 
-  min-height: 600px; 
- }
-
-#hello {
-	color: #9F7;
-	margin-top: 25%; 
-}
-
-#entrance {
-	color: #CCC;
-	font-size:18px;
-	text-align:center;
-	letter-spacing: 5px;
-	  position: absolute;
-	  width:400px;
-	  height:331px;
-	  margin-left:-200px;
-	  margin-top:-165.5px;
-	  top: 50%;
-	  left: 50%;
-	  
-  background: url(../images/imac.png) 0 0 no-repeat;
-  background-size: 400px 331px;
 }
 
 /* メイン部の設定 */
