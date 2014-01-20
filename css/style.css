@@ -13,8 +13,19 @@ body {
 }
 
 a {
-	color: white;
+	color: #CCC;
 	text-decoration: none;
+}
+
+a:hover {
+	color: #777;
+	text-decoration: none;
+}
+
+#back {
+	margin: 10px;
+	font-weight:bold;
+	font-size:20px;
 }
 
 /* フッタの設定 */
@@ -88,7 +99,6 @@ ul.list {
 	position: relative;
 	margin: 0 auto;
 	width: 1000px;
-	min-height: 800px;
 }
 
 /* メイン部の設定 */
@@ -98,6 +108,22 @@ ul.list {
 	  padding: 20px 15px;
 }
 
+#main2 {
+	  color: #777;
+	  margin: 50px auto;
+	  padding: 20px 15px;
+}
+
+#profile {
+	 color: #777;
+	 font-size: 12px;
+	 width: 800px;
+	 margin: 67px auto 100px auto;
+	 padding: 50px 0px;
+	 border-top: solid 1px #EEE;
+	 border-bottom: solid 1px #EEE;
+
+}
 
 /* フッタの設定 */
 #footer {
@@ -109,14 +135,6 @@ ul.list {
 	min-height: 20px;
 	text-align: center;
 	z-index: 3000;
-}
-
-#at {
-	background: url(../images/atsum.png) 0 0 no-repeat; 
-}
-
-#fbm {
-	background: url(../images/fbm.png) 0 0 no-repeat; 
 }
 
 #contentWrap {
@@ -142,3 +160,18 @@ ul.list {
 	background-repeat: no-repeat;
 }
 
+#at {
+	background: url(../images/atsum.png) 0 0 no-repeat; 
+}
+#fbm {
+	background: url(../images/fbm.png) 0 0 no-repeat; 
+}
+#nZero {
+	background: url(../images/2032.png) 0 0 no-repeat; 
+}
+#blks {
+	background: url(../images/blks.jpg) 0 0 no-repeat; 
+}
+#ubi {
+	background: url(../images/ubi.jpg) 0 0 no-repeat; 
+}
