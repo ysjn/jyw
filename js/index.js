@@ -41,6 +41,8 @@ var draw = function() {
 init();
 draw();
 
+$('.flexslider').flexslider();
+
 	setTimeout(function(){
 		$("#logo").animate({ 'top': '-2px', 'left': '12px', width: '70px', height: '70px', opacity: '0.2'},{duration: 800, easing: "swing"});
 		$("#logo").fadeOut("slow",function(){
@@ -48,6 +50,6 @@ draw();
 		});
 		$("#headWrap").fadeIn(3000);
 	}, 3200);
-
-
-});
+	
+	
+}); //initial function

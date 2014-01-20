@@ -93,9 +93,9 @@ ul.list {
 
 /* メイン部の設定 */
 #main {
-	  height: 800px;
+	  min-height: 1600px;
 	  margin: 70px auto;
-	  padding: 10px 15px;
+	  padding: 15px 15px;
 }
 
 
@@ -132,3 +132,4 @@ ul.list {
 	border: solid 1px #AAA;
 	background-repeat: no-repeat;
 }
+
