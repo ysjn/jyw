@@ -125,6 +125,30 @@ ul.list {
 
 }
 
+#workContainer {
+	 color: #777;
+	 font-size: 12px;
+	 width: 800px;
+	 margin: 67px auto 100px auto;
+	 padding: 50px 0px;
+	 border-top: solid 1px #EEE;
+	 border-bottom: solid 1px #EEE;
+}
+
+#Limg {
+	width: 400px;
+	height: 100px;
+	background: red;
+	float: left;
+}
+
+#Rtext {
+	width: 300px;
+	height: auto;
+	padding: 50px;
+	float:left;
+}
+
 /* フッタの設定 */
 #footer {
 	color: #AAA;
