@@ -3,6 +3,7 @@ $(function(){
 
 $("#headWrap").hide();
 $("#main").hide();
+$("#bottomFooter").hide();
 
 
 var current_frame, total_frames, path, length, handle, myobj;
@@ -46,6 +47,7 @@ draw();
 		$("#logo").fadeOut("slow", function(){ 
 			$('.flexslider').flexslider();
 			$("#main").fadeIn();
+			$("#bottomFooter").fadeIn();
 		}); 
 		$("#headWrap").fadeIn(3000);
 	}, 3200);

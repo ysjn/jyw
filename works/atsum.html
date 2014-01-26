@@ -14,15 +14,6 @@
 
 <body>
 
-<script>
-	$(document).ready(function(){
-		  $('.flexslider').flexslider({
-				animation: "slide",
-				controlNav: "thumbnails"
-		  });
-	});
-</script>
-
 <div id="headWrap">
     <a href="index.html">
     <div id="headerIcon">Jy.</div>
@@ -32,14 +23,14 @@
             <li><a href="#">CONTACT</a></li>
                 <li><a href="about.html">ABOUT</a></li>
             <li><a href="#"><font color="#777">WORKS</font></a></li>
-            <li><a href="home.html">HOME</a></li>
+            <li><a href="../home.html">HOME</a></li>
             </ul>
         </div>
 </div>
 <div id="wrapper"><!-- #wrapper -->
-    <div id = "main2">
-        <div id="back"><a href="home.html">←</a></div>
-            <div id="workContainer">
+    <div id = "main">
+        <div id="back"><a href="../home.html">←</a></div>
+            <div id="workContainer" class="clearfix">
 				<div id="Limg">
                               <a href="images/atsumImg/1.png" data-lightbox="atsum"><img src="images/atsumImg/th_1.png" class="Lthumb"/></a>
                               <a href="images/atsumImg/2.png" data-lightbox="atsum"><img src="images/atsumImg/th_2.png" class="Lthumb"/></a>
@@ -51,11 +42,10 @@
                  <div id="Rtext">
                          <p><b>あつまったー / atsumatter</b>
                          <br />
-                         <br />「ツイートする人々をを視覚化する」というコンセプトで制作しました。単語を入力しツイートを検索すると小さなキャラクターがあつまってきます。ツイートの数により木や草等の画面内のオブジェクトが変化します。
+                         <br />「ツイートする人々をを視覚化する」というコンセプトで制作したインタラクティブなウェブサイトです。好きな単語やハッシュタグを入力し、ツイートを検索すると小さなキャラクターがあつまってきます。ツイートの数により木や草等の画面内のオブジェクトが変化します。
                          <br />
                          <br />
-                         <br />This was a small project on visualising social media. 
-                         <br />Search for tweet and little characters will "gather" as a result. Objects in the field will change according to the number of tweets.
+                         <br />This was a small project on visualising social media. An interactive website that uses twitter search API. Search for tweet and little characters will "gather" as a result. Objects in the field will change according to the number of tweets.
                          <br /><br />
                          <br /><a href="http://www.idd.tamabi.ac.jp/m47069/atsumatter/" target="_blank">サイトを開く / Launch site</a>
                          </p>
@@ -63,6 +53,23 @@
             </div>
     </div><!-- main2 -->
     
+	<div id="bottomFooter" class="clearfix">
+        <div id="footerL">
+        <p>Jun Yoshida Portfolio Website.
+        <br /><br />
+        <p><a href="https://www.facebook.com/jun.yoshida.775">Facebook</a></p>
+        <p><a href="https://twitter.com/Ys_Jn">Twitter</a></p>
+        </p>
+        </div>
+        <div id="footerR">
+        <ul>
+            <li><a href="../home.html">HOME</a></li>
+            <li><a href="#">WORKS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        </div>
+    </div>
         
 <div id="footer">© 2013 JunYoshida All Rights Reserved.</footer>
 </div><!-- #wrapper -->

@@ -90,6 +90,8 @@ ul.list {
 	margin:12px;
 }
 
+
+
 /* #wrapperの設定 */
 #wrapper {
 	background:white;
@@ -98,21 +100,46 @@ ul.list {
 	width: 1000px;
 }
 
-/* メイン部の設定 */
 #main {
 	  color: #777;
-	  margin: 50px auto 0 auto;
+	  margin: 50px auto;
 	  padding: 20px 15px;
 }
 
-#profile {
+#workContainer {
 	 color: #777;
 	 font-size: 12px;
 	 width: 800px;
-	 margin: 67px auto;
+	 margin: 67px auto 100px auto;
 	 padding: 50px 0px;
 	 border-top: solid 1px #EEE;
 	 border-bottom: solid 1px #EEE;
+}
+
+#Limg {
+	width: 356px;
+	height: 356px;
+	padding: 22px;
+	float: left;
+}
+
+.Lthumb {
+	width: 150px;
+	height: 150px;
+	margin: 13px;
+	border: solid 1px #EEE;
+	float: left;
+}
+
+img.Lthumb:hover {
+	border: solid 1px #777;
+}
+
+#Rtext {
+	width: 400px;
+	height: auto;
+	padding: 35px 0;
+	float:left;
 }
 
 /* フッタの設定 */
@@ -125,42 +152,6 @@ ul.list {
 	min-height: 20px;
 	text-align: center;
 	z-index: 3000;
-}
-
-#contentWrap {
-	padding: 40px 0px;
-	width: 968px;
-	border-top: solid 1px #EEE;
-}
-
-.content {
-	width: 220px;
-	height:150px;
-	margin: 10px;
-	float: left;
-
-	text-align: left;
-	font-size: 10px;
-	font-weight: lighter;
-	
-	border: solid 1px #EEE;
-	background-repeat: no-repeat;
-}
-
-#at {
-	background: url(../images/atsum.png) 0 0 no-repeat; 
-}
-#fbm {
-	background: url(../images/fbm.png) 0 0 no-repeat; 
-}
-#nZero {
-	background: url(../images/2032.png) 0 0 no-repeat; 
-}
-#blks {
-	background: url(../images/blks.jpg) 0 0 no-repeat; 
-}
-#ubi {
-	background: url(../images/ubi.jpg) 0 0 no-repeat; 
 }
 
 
