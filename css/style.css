@@ -13,7 +13,7 @@ body {
 }
 
 a {
-	color: #CCC;
+	color: #BBB;
 	text-decoration: none;
 }
 
@@ -129,6 +129,7 @@ ul.list {
 	 color: #777;
 	 font-size: 12px;
 	 width: 800px;
+	 min-height: 400px;
 	 margin: 67px auto 100px auto;
 	 padding: 50px 0px;
 	 border-top: solid 1px #EEE;
@@ -137,15 +138,26 @@ ul.list {
 
 #Limg {
 	width: 400px;
-	height: 100px;
-	background: red;
+	height: 400px;
 	float: left;
 }
 
+.Lthumb {
+	width: 150px;
+	height: 150px;
+	margin: 23px;
+	border: solid 1px #EEE;
+	float: left;
+}
+
+img.Lthumb:hover {
+	border: solid 1px #777;
+}
+
 #Rtext {
-	width: 300px;
+	width: 400px;
 	height: auto;
-	padding: 50px;
+	padding: 25px 0;
 	float:left;
 }
 
