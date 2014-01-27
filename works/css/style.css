@@ -109,11 +109,46 @@ ul.list {
 #workContainer {
 	 color: #777;
 	 font-size: 12px;
-	 width: 800px;
-	 margin: 67px auto 100px auto;
+	 width: 968px;
+	 margin: 68px auto 100px auto;
 	 padding: 50px 0px;
 	 border-top: solid 1px #EEE;
 	 border-bottom: solid 1px #EEE;
+}
+
+#works .mix{
+    opacity: 0;
+    display: none;
+}
+
+#buttonWrap {
+	width: 968px;
+	margin: 25px auto 0 auto;
+}
+
+.filter {  
+	float: left;
+    border-top: 1px solid #ccc;  
+    border-right: 1px solid #999;  
+    border-bottom: 1px solid #999;  
+    border-left: 1px solid #ccc;  
+    padding: 5px 20px;  
+	margin: 0 10px;
+    cursor:pointer;  
+    color: #CCC;  
+} 
+
+.content {
+	width: 220px;
+	height:150px;
+	margin: 8px;
+
+	text-align: left;
+	font-size: 10px;
+	font-weight: lighter;
+	
+	border: solid 1px #EEE;
+	background-repeat: no-repeat;
 }
 
 #Limg {
