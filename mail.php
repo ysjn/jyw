@@ -83,7 +83,7 @@ $requireCheck = 1;
 
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
 値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです */
-$require = array('お名前','Email');
+$require = array('お名前/Name','Email');
 
 
 //----------------------------------------------------------------------
@@ -177,7 +177,7 @@ if(empty($errm)){
 		if($key == $Email) $post_mail = h($val);
 		if($key == $Email && $mail_check == 1 && !empty($val)){
 			if(!checkMail($val)){
-				$errm .= "<p class=\"error_messe\">【".$key."】はメールアドレスの形式が正しくありません。</p>\n";
+				$errm .= "<p class=\"error_messe\">【".$key."】はメールアドレスの形式が正しくありません。<br /><br /> Email address is incorrect.</p>\n";
 				$empty_flag = 1;
 			}
 		}
@@ -206,15 +206,112 @@ else if($confirmDsp == 1){
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>確認画面</title>
+<title>確認画面 / Confirmation Page</title>
 <style type="text/css">
-/* 自由に編集下さい */
+body {
+	margin: 0;  
+	width: 100%;
+	background: #F5F5F5;
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;	font-size: 12px;
+ 	font-weight: lighter;
+	color: white;
+}
+
+/* フッタの設定 */
+#headWrap {
+	position: fixed !important;  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+	height: 43px;
+	background: white;
+	/* shadows */ 
+    box-shadow: 0 1px 8px #AAA;
+    -moz-box-shadow: 0 1px 8px #AAA; /* Firefox対応 */
+    -webkit-box-shadow: 0 1px 8px #AAA; /* Safari、Chrome対応 */
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* IE7対応 */
+    -ms-filter: "alpha(opacity=90)"; /* IE8対応 */
+	z-index: 20;
+}
+
+#headerIcon {
+	border: solid 3px;
+	border-color: #DDD;
+	color: #DDD;
+	position: fixed;
+	width: 28px;
+	height: 28px;
+    top: 5px;
+	left: 30px;
+	font-size: 20px;
+	font-style: italic; 
+	min-height: 20px;
+	text-align: center;
+	-moz-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	z-index: 30;
+}
+
+#logo {
+	position: relative;
+	margin-top: 0;
+	z-index: 30;
+}
+
+
+/* #wrapperの設定 */
+#wrapper {
+	background:white;
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+/* メイン部の設定 */
+#main {
+	  color: #777;
+	  margin: 50px auto 0 auto;
+	  padding: 20px 15px;
+}
+
+/* フッタの設定 */
+#footer {
+	color: #AAA;
+	width: 1000px;
+	position: fixed;
+	padding: 0px auto;
+    bottom:5px;
+	min-height: 20px;
+	text-align: center;
+	z-index: 3000;
+}
+
+#bottomFooter {
+	margin: 0 auto;
+	padding: 30px;
+	width: 940px;
+	height: 100px;
+	background: #DDD;
+}
+
+/* --------------------form--------------------*/
 #formWrap {
 	width:700px;
-	margin:0 auto;
+	margin:67px auto;
 	color:#555;
 	line-height:120%;
 	font-size:90%;
+	 padding: 50px 0px;
+	 border-top: solid 1px #EEE;
+	 border-bottom: solid 1px #EEE;
+}
+#formWrap p{
+	color: #AAA;
+	margin: 20px 0 10px 0;
 }
 table.formTable{
 	width:100%;
@@ -242,6 +339,13 @@ p.error_messe{
 <!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
 
 <!-- ▼************ 送信内容表示部　※編集は自己責任で ************ ▼-->
+<div id="headWrap">
+    <a href="index.html">
+    <div id="headerIcon">Jy.</div>
+    </a>
+</div>
+<div id="wrapper"><!-- #wrapper -->
+    <div id = "main">
 <div id="formWrap">
 <?php if($empty_flag == 1){ ?>
 <div align="center">
@@ -250,8 +354,8 @@ p.error_messe{
 <?php echo $errm; ?><br /><br /><input type="button" value=" 前画面に戻る / Back " onClick="history.back()">
 </div>
 <?php }else{ ?>
-<h3>確認画面 / Confirmation Page</h3>
-<p align="center">以下の内容で間違いがなければ、「送信する」ボタンを押してください。<br />If you confirmed your inputs, click "Send".</p>
+<h3 align="center">確認画面 / Confirmation Page</h3>
+<p align="center">以下の内容で間違いがなければ、「送信する」ボタンを押してください。<br /><br />If you confirmed your inputs, click "Send".</p>
 <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="POST">
 <table class="formTable">
 <?php echo confirmOutput($_POST);//入力内容を表示?>
@@ -263,6 +367,12 @@ p.error_messe{
 </form>
 <?php } ?>
 </div><!-- /formWrap -->
+</div>
+<div id="footer">© 2013 JunYoshida All Rights Reserved.</div>
+	<div id="bottomFooter" class="clearfix">
+    </div>
+</div><!--wrapper-->    
+
 <!-- ▲ *********** 送信内容確認部　※編集は自己責任で ************ ▲-->
 
 <!-- ▼ Footerその他コンテンツなど　※編集可 ▼-->
@@ -281,8 +391,142 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>完了画面 / Message has been sent.</title>
+<style type="text/css">
+body {
+	margin: 0;  
+	width: 100%;
+	background: #F5F5F5;
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;	font-size: 12px;
+ 	font-weight: lighter;
+	color: white;
+}
+
+/* フッタの設定 */
+#headWrap {
+	position: fixed !important;  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+	height: 43px;
+	background: white;
+	/* shadows */ 
+    box-shadow: 0 1px 8px #AAA;
+    -moz-box-shadow: 0 1px 8px #AAA; /* Firefox対応 */
+    -webkit-box-shadow: 0 1px 8px #AAA; /* Safari、Chrome対応 */
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* IE7対応 */
+    -ms-filter: "alpha(opacity=90)"; /* IE8対応 */
+	z-index: 20;
+}
+
+#headerIcon {
+	border: solid 3px;
+	border-color: #DDD;
+	color: #DDD;
+	position: fixed;
+	width: 28px;
+	height: 28px;
+    top: 5px;
+	left: 30px;
+	font-size: 20px;
+	font-style: italic; 
+	min-height: 20px;
+	text-align: center;
+	-moz-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	z-index: 30;
+}
+
+#logo {
+	position: relative;
+	margin-top: 0;
+	z-index: 30;
+}
+
+
+/* #wrapperの設定 */
+#wrapper {
+	background:white;
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+/* メイン部の設定 */
+#main {
+	  color: #777;
+	  margin: 50px auto 0 auto;
+	  padding: 20px 15px;
+}
+
+/* フッタの設定 */
+#footer {
+	color: #AAA;
+	width: 1000px;
+	position: fixed;
+	padding: 0px auto;
+    bottom:5px;
+	min-height: 20px;
+	text-align: center;
+	z-index: 3000;
+}
+
+#bottomFooter {
+	margin: 0 auto;
+	padding: 30px;
+	width: 940px;
+	height: 100px;
+	background: #DDD;
+}
+
+/* --------------------form--------------------*/
+#formWrap {
+	width:700px;
+	margin:67px auto;
+	color:#555;
+	line-height:120%;
+	font-size:90%;
+	 padding: 50px 0px;
+	 border-top: solid 1px #EEE;
+	 border-bottom: solid 1px #EEE;
+}
+#formWrap p{
+	color: #AAA;
+	margin: 20px 0 10px 0;
+}
+table.formTable{
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}
+p.error_messe{
+	margin:5px 0;
+	color:red;
+}
+</style>
 </head>
 <body>
+<div id="headWrap">
+    <a href="index.html">
+    <div id="headerIcon">Jy.</div>
+    </a>
+</div>
+<div id="wrapper"><!-- #wrapper -->
+    <div id = "main">
+    <div id="formWrap">
 <div align="center">
 <?php if($empty_flag == 1){ ?>
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
@@ -290,15 +534,27 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <div style="color:red"><?php echo $errm; ?></div>
 <br /><br /><input type="button" value=" 前画面に戻る / Back " onClick="history.back()">
 </div>
+</div>
+</div>
+<div id="footer">© 2013 JunYoshida All Rights Reserved.</div>
+	<div id="bottomFooter" class="clearfix">
+    </div>
+</div><!--wrapper-->    
 </body>
 </html>
 <?php }else{ ?>
 送信ありがとうございました。Thank you for your message.<br />
 送信は正常に完了しました。Message has been successfully sent.<br /><br />
-<a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
+<a href="<?php echo $site_top ;?>">Back to TOP</a>
 </div>
 <?php copyright(); ?>
 <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
+</div>
+</div>
+<div id="footer">© 2013 JunYoshida All Rights Reserved.</div>
+	<div id="bottomFooter" class="clearfix">
+    </div>
+</div><!--wrapper-->    
 </body>
 </html>
 <?php 
@@ -457,7 +713,7 @@ function requireCheck($require){
 		$existsFalg = '';
 		foreach($_POST as $key => $val) {
 			if($key == $requireVal && empty($val)) {
-				$res['errm'] .= "<p class=\"error_messe\">【".$key."】は必須入力項目です。</p>\n";
+				$res['errm'] .= "<p class=\"error_messe\">【".$key."】は必須入力項目です。<br /><br />【".$key."】is required.</p>\n";
 				$res['empty_flag'] = 1;
 				$existsFalg = 1;
 				break;
@@ -467,7 +723,7 @@ function requireCheck($require){
 			}
 		}
 		if($existsFalg != 1){
-				$res['errm'] .= "<p class=\"error_messe\">【".$requireVal."】が未選択です。</p>\n";
+				$res['errm'] .= "<p class=\"error_messe\">【".$requireVal."】が未選択です。<br /><br />【".$requireVal."】is not selected.</p>\n";
 				$res['empty_flag'] = 1;
 		}
 	}
