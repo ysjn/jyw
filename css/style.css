@@ -147,6 +147,10 @@ ul.list {
 	background-repeat: no-repeat;
 }
 
+.content:hover {
+	border: solid 1px #777;
+}
+
 #at {
 	background: url(../works/images/thumbs/atsum.png) 0 0 no-repeat; 
 }

@@ -52,5 +52,4 @@ draw();
 		$("#headWrap").fadeIn(3000);
 	}, 3200);
 	
-	
 }); //initial function

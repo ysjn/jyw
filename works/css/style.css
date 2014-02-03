@@ -152,16 +152,15 @@ ul.list {
 }
 
 #Limg {
-	width: 356px;
-	height: 356px;
-	padding: 22px;
+	width: 520px;
+	padding: 20px;
 	float: left;
 }
 
 .Lthumb {
-	width: 150px;
+	width: 240px;
 	height: 150px;
-	margin: 13px;
+	margin: 9px;
 	border: solid 1px #EEE;
 	float: left;
 }
@@ -172,7 +171,6 @@ img.Lthumb:hover {
 
 #Rtext {
 	width: 400px;
-	height: auto;
 	padding: 35px 0;
 	float:left;
 }
