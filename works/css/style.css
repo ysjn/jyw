@@ -175,6 +175,10 @@ img.Lthumb:hover {
 	float:left;
 }
 
+#vid {
+	padding: 0 84px;
+}
+
 /* フッタの設定 */
 #footer {
 	color: #AAA;
