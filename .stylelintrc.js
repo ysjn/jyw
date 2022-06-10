@@ -8,6 +8,6 @@ module.exports = {
   ],
   ignoreFiles: ['**/node_modules/**'],
   rules: {
-    'selector-class-pattern': '^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
+    'selector-class-pattern': '^[A-Z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
   },
 };
