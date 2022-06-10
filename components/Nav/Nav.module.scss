@@ -13,6 +13,10 @@
   box-shadow: 0 1px 8px #aaa;
   opacity: 0.9;
 
+  &__home {
+    animation: enter-animation 1s 3.5s both;
+  }
+
   &__icon {
     z-index: 30;
     width: 28px;
@@ -37,6 +41,16 @@
 
     li a {
       padding: 12px;
+    }
+  }
+
+  @keyframes enter-animation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.9;
     }
   }
 }

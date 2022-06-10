@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import styles from './Nav.module.scss';
 
-export const Nav: React.FC = () => (
-  <div className={styles.Nav}>
+interface NavProps {
+  isHome?: boolean;
+}
+
+export const Nav: React.FC<NavProps> = (props) => (
+  <div className={`${styles.Nav} ${props.isHome ? styles.Nav__home : ''}`}>
     <Link href="/">
       <div className={styles.Nav__icon}>Jy.</div>
     </Link>

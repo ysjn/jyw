@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import Link from 'next/link';
 import { Footer } from '@/components/Footer/Footer';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
-import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <div id="logo">
         <Logo />
-        <Nav />
+        <Nav isHome />
       </div>
 
       <div id="wrapper">
