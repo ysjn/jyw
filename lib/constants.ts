@@ -10,3 +10,10 @@ export const WORKS = [
   {},
   {},
 ];
+
+export const SLIDE_SHOW = [
+  { href: '/works/blocks', src: '/slideshow/1.jpg' },
+  { href: '/works/blocks', src: '/slideshow/2.jpg' },
+  { href: '/works/2032', src: '/slideshow/3.jpg' },
+  { href: '/works/bfp', src: '/slideshow/4.jpg' },
+];

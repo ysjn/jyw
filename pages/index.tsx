@@ -13,7 +13,7 @@ import { Grid } from '@/components/Grid/Grid';
 import { GridItem } from '@/components/Grid/GridItem';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
-import { HAS_VISITED, WORKS } from 'lib/constants';
+import { HAS_VISITED, WORKS, SLIDE_SHOW } from 'lib/constants';
 import { LocalStorageEngine } from 'lib/localStorageEngine';
 
 const Home: NextPage = () => {
@@ -31,13 +31,6 @@ const Home: NextPage = () => {
       LS.save(HAS_VISITED, '1');
     }, 4000);
   }, [setIntroComplete]);
-
-  const slideshow = [
-    { href: '/works/blocks', src: '/slideshow/1.jpg' },
-    { href: '/works/blocks', src: '/slideshow/2.jpg' },
-    { href: '/works/2032', src: '/slideshow/3.jpg' },
-    { href: '/works/bfp', src: '/slideshow/4.jpg' },
-  ];
 
   return (
     <div className={!introComplete ? styles.Root__introPlaying : undefined}>
@@ -57,7 +50,7 @@ const Home: NextPage = () => {
             showArrows
             infiniteLoop
           >
-            {slideshow.map((slide, index) => (
+            {SLIDE_SHOW.map((slide, index) => (
               <div key={index}>
                 <Link href={slide.href}>
                   <a>
