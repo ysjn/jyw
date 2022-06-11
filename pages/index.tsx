@@ -1,49 +1,59 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import { Footer } from '@/components/Footer/Footer';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
 
 const Home: NextPage = () => {
+  const [introComplete, setIntroComplete] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setIntroComplete(true), 3000);
+  }, []);
+
   return (
     <div>
       <Head>
         <title>Jy. Portfolio</title>
       </Head>
-      <div id="logo">
-        <Logo />
-        <Nav isHome />
-      </div>
+      <Logo />
+      <Nav isHome />
 
       <div id="wrapper">
         <div id="main">
-          <div className="flexslider">
-            <ul className="slides">
-              <li>
-                <Link href="/works/blocks">
-                  <Image src="/slideshow/1.jpg" width="900" height="600" alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/works/blocks">
-                  <Image src="/slideshow/2.jpg" width="900" height="600" alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/works/2032">
-                  <Image src="/slideshow/3.jpg" width="900" height="600" alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/works/bfp">
-                  <Image src="/slideshow/4.jpg" width="900" height="600" alt="" />
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <Carousel
+            swipeable={false}
+            showStatus={false}
+            autoPlay={introComplete}
+            showArrows
+            infiniteLoop
+          >
+            <div>
+              <Link href="/works/blocks">
+                <Image src="/slideshow/1.jpg" width="900" height="600" alt="" />
+              </Link>
+            </div>
+            <div>
+              <Link href="/works/blocks">
+                <Image src="/slideshow/2.jpg" width="900" height="600" alt="" />
+              </Link>
+            </div>
+            <div>
+              <Link href="/works/2032">
+                <Image src="/slideshow/3.jpg" width="900" height="600" alt="" />
+              </Link>
+            </div>
+            <div>
+              <Link href="/works/bfp">
+                <Image src="/slideshow/4.jpg" width="900" height="600" alt="" />
+              </Link>
+            </div>
+          </Carousel>
 
           <div id="contentWrap" className="clearfix">
             <Link href="/works/atsum">
