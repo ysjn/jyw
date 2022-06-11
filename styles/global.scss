@@ -22,17 +22,19 @@ a {
   }
 }
 
-/* #wrapperの設定 */
-#wrapper {
+.carousel .slider {
+  min-height: 600px;
+}
+
+.Wrapper {
   position: relative;
   width: 1000px;
-  margin: 10px auto;
+  margin: 60px auto;
   background: white;
 }
 
-/* メイン部の設定 */
-#main {
-  padding: 20px 15px;
+.Main {
+  padding: 16px;
   margin: 50px auto 0;
   color: #777;
 }
@@ -57,49 +59,6 @@ a {
   padding: 0 auto;
   color: #aaa;
   text-align: center;
-}
-
-#contentWrap {
-  width: 968px;
-  padding: 40px 0;
-  margin: 10px 0;
-  border-top: solid 1px #eee;
-}
-
-.content {
-  float: left;
-  width: 220px;
-  height: 150px;
-  margin: 10px;
-  font-size: 10px;
-  font-weight: lighter;
-  text-align: left;
-  background-repeat: no-repeat;
-  border: solid 1px #eee;
-
-  &:hover {
-    border: solid 1px #777;
-  }
-}
-
-#at {
-  background: url('/works/thumbs/atsum.png') 0 0 no-repeat;
-}
-
-#fbm {
-  background: url('/works/thumbs/fbm.png') 0 0 no-repeat;
-}
-
-#nZero {
-  background: url('/works/thumbs/2032.png') 0 0 no-repeat;
-}
-
-#blks {
-  background: url('/works/thumbs/blks.jpg') 0 0 no-repeat;
-}
-
-#bfp {
-  background: url('/works/thumbs/bfp.jpg') 0 0 no-repeat;
 }
 
 #bottomFooter {

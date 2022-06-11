@@ -1,0 +1,53 @@
+.Grid {
+  display: grid;
+  margin: 16px 0;
+
+  &__col2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__col4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__gap8 {
+    gap: 8px;
+  }
+
+  &__gap16 {
+    gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+
+    &:not(:empty):hover {
+      cursor: pointer;
+      border: 1px solid #777;
+    }
+
+    &:empty::before {
+      color: #ccc;
+      content: 'n/a';
+    }
+  }
+
+  &__noBackground > .Grid__item {
+    background-color: transparent;
+  }
+
+  &__noBorder > .Grid__item {
+    border: none;
+
+    &:not(:empty):hover {
+      cursor: normal;
+      border: none;
+    }
+  }
+}

@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
+import { Grid } from '@/components/Grid/Grid';
+import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_2032: NextPage = () => {
@@ -11,52 +14,44 @@ const works_2032: NextPage = () => {
       <Head>
         <title>Works. #2032</title>
       </Head>
-
       <Nav />
-      <div id="wrapper">
-        <div id="main">
+      <div className="Wrapper">
+        <div className="Main">
           <Back />
-          <div id="workContainer" className="clearfix">
-            <div id="Limg">
-              <a href="/works/2032Img/1.png" data-lightbox="fbm">
-                <Image
-                  src="/works/2032Img/th_1.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/2032Img/2.png" data-lightbox="fbm">
-                <Image
-                  src="/works/2032Img/th_2.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/2032Img/3.png" data-lightbox="fbm">
-                <Image
-                  src="/works/2032Img/th_3.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/2032Img/4.png" data-lightbox="fbm">
-                <Image
-                  src="/works/2032Img/th_4.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-            </div>
-
-            <div id="Rtext">
+          <Grid column={2} gap={16} noBackground noBorder>
+            <GridItem>
+              <Grid column={2}>
+                <GridItem>
+                  <Link href="/works/2032Img/1.png">
+                    <a>
+                      <Image src="/works/2032Img/th_1.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/2032Img/2.png">
+                    <a>
+                      <Image src="/works/2032Img/th_2.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/2032Img/3.png">
+                    <a>
+                      <Image src="/works/2032Img/th_3.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/2032Img/4.png">
+                    <a>
+                      <Image src="/works/2032Img/th_4.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+              </Grid>
+            </GridItem>
+            <GridItem>
               <p>
                 <b>#2032</b>
                 <br />
@@ -71,16 +66,16 @@ const works_2032: NextPage = () => {
                 <br />
                 <br />
                 <br />
-                <a
+                <Link
                   href="http://www.idd.tamabi.ac.jp/m47069/2032/index.html"
                   target="_blank"
                   rel="noreferrer"
                 >
                   サイトを開く(音が出ます)/ Launch site(w/sound)
-                </a>
+                </Link>
               </p>
-            </div>
-          </div>
+            </GridItem>
+          </Grid>
         </div>
         <Footer />
       </div>

@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
+import { Grid } from '@/components/Grid/Grid';
+import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_bfp: NextPage = () => {
@@ -11,52 +14,44 @@ const works_bfp: NextPage = () => {
       <Head>
         <title>Works. Binary Fingerprints</title>
       </Head>
-
       <Nav />
-      <div id="wrapper">
-        <div id="main">
+      <div className="Wrapper">
+        <div className="Main">
           <Back />
-          <div id="workContainer" className="clearfix">
-            <div id="Limg">
-              <a href="/works/bfpImg/1.jpg" data-lightbox="fbm">
-                <Image
-                  src="/works/bfpImg/th_1.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/bfpImg/2.jpg" data-lightbox="fbm">
-                <Image
-                  src="/works/bfpImg/th_2.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/bfpImg/3.jpg" data-lightbox="fbm">
-                <Image
-                  src="/works/bfpImg/th_3.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/bfpImg/4.png" data-lightbox="fbm">
-                <Image
-                  src="/works/bfpImg/th_4.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-            </div>
-
-            <div id="Rtext">
+          <Grid column={2} gap={16} noBackground noBorder>
+            <GridItem>
+              <Grid column={2}>
+                <GridItem>
+                  <Link href="/works/bfpImg/1.jpg">
+                    <a>
+                      <Image src="/works/bfpImg/th_1.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/bfpImg/2.jpg">
+                    <a>
+                      <Image src="/works/bfpImg/th_2.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/bfpImg/3.jpg">
+                    <a>
+                      <Image src="/works/bfpImg/th_3.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/bfpImg/4.png">
+                    <a>
+                      <Image src="/works/bfpImg/th_4.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+              </Grid>
+            </GridItem>
+            <GridItem>
               <p>
                 <b>Binary Fingerprints : Ubiquitous Archiving</b>
                 <br />
@@ -72,10 +67,9 @@ const works_bfp: NextPage = () => {
                 <br />
                 <br />
               </p>
-            </div>
-          </div>
+            </GridItem>
+          </Grid>
         </div>
-
         <Footer />
       </div>
     </div>

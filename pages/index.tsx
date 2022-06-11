@@ -9,6 +9,8 @@ import styles from './index.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import { Footer } from '@/components/Footer/Footer';
+import { Grid } from '@/components/Grid/Grid';
+import { GridItem } from '@/components/Grid/GridItem';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
 import { HAS_VISITED } from 'lib/constants';
@@ -38,8 +40,8 @@ const Home: NextPage = () => {
       {!introComplete && <Logo />}
       <Nav noAnimation={introComplete} isHome />
 
-      <div id="wrapper">
-        <div id="main">
+      <div className="Wrapper">
+        <div className="Main">
           <Carousel
             swipeable={false}
             showStatus={false}
@@ -50,52 +52,75 @@ const Home: NextPage = () => {
           >
             <div>
               <Link href="/works/blocks">
-                <Image src="/slideshow/1.jpg" width="900" height="600" alt="" />
+                <a>
+                  <Image src="/slideshow/1.jpg" layout="fill" alt="" />
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/works/blocks">
-                <Image src="/slideshow/2.jpg" width="900" height="600" alt="" />
+                <a>
+                  <Image src="/slideshow/2.jpg" layout="fill" alt="" />
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/works/2032">
-                <Image src="/slideshow/3.jpg" width="900" height="600" alt="" />
+                <a>
+                  <Image src="/slideshow/3.jpg" layout="fill" alt="" />
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/works/bfp">
-                <Image src="/slideshow/4.jpg" width="900" height="600" alt="" />
+                <a>
+                  <Image src="/slideshow/4.jpg" layout="fill" alt="" />
+                </a>
               </Link>
             </div>
           </Carousel>
 
-          <div id="contentWrap" className="clearfix">
-            <Link href="/works/atsum">
-              <div id="at" className="content"></div>
-            </Link>
-            <Link href="/works/fbm">
-              <div id="fbm" className="content"></div>
-            </Link>
-            <Link href="/works/2032">
-              <div id="nZero" className="content"></div>
-            </Link>
-            <Link href="/works/blocks">
-              <div id="blks" className="content"></div>
-            </Link>
-            <Link href="/works/bfp">
-              <div id="bfp" className="content"></div>
-            </Link>
-            <Link href="#">
-              <div className="content">N/A</div>
-            </Link>
-            <Link href="#">
-              <div className="content">N/A</div>
-            </Link>
-            <Link href="#">
-              <div className="content">N/A</div>
-            </Link>
-          </div>
+          <Grid>
+            <GridItem>
+              <Link href="/works/atsum">
+                <a>
+                  <Image src="/works/thumbs/atsum.png" layout="fill" alt="" />
+                </a>
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link href="/works/fbm">
+                <a>
+                  <Image src="/works/thumbs/fbm.png" layout="fill" alt="" />
+                </a>
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link href="/works/2032">
+                <a>
+                  <Image src="/works/thumbs/2032.png" layout="fill" alt="" />
+                </a>
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link href="/works/blocks">
+                <a>
+                  <Image src="/works/thumbs/blks.jpg" layout="fill" alt="" />
+                </a>
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link href="/works/bfp">
+                <a>
+                  <Image src="/works/thumbs/bfp.jpg" layout="fill" alt="" />
+                </a>
+              </Link>
+            </GridItem>
+            <GridItem />
+            <GridItem />
+            <GridItem />
+          </Grid>
+          <div id="contentWrap" className="clearfix"></div>
         </div>
         <Footer />
       </div>

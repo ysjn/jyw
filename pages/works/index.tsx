@@ -12,8 +12,8 @@ const Works: NextPage = () => (
     </Head>
 
     <Nav />
-    <div id="wrapper">
-      <div id="main">
+    <div className="Wrapper">
+      <div className="Main">
         <Back />
         <ul id="buttonWrap">
           <li

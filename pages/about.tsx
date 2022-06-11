@@ -13,8 +13,8 @@ const About: NextPage = () => {
       </Head>
 
       <Nav />
-      <div id="wrapper">
-        <div id="main">
+      <div className="Wrapper">
+        <div className="Main">
           <Back />
           <div id="profile">
             <p>

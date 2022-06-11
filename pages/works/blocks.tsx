@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
+import { Grid } from '@/components/Grid/Grid';
+import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_blocks: NextPage = () => {
@@ -11,52 +14,44 @@ const works_blocks: NextPage = () => {
       <Head>
         <title>Works. Blocks</title>
       </Head>
-
       <Nav />
-      <div id="wrapper">
-        <div id="main">
+      <div className="Wrapper">
+        <div className="Main">
           <Back />
-          <div id="workContainer" className="clearfix">
-            <div id="Limg">
-              <a href="/works/blksImg/1.png" data-lightbox="fbm">
-                <Image
-                  src="/works/blksImg/th_1.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/blksImg/2.png" data-lightbox="fbm">
-                <Image
-                  src="/works/blksImg/th_2.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/blksImg/3.png" data-lightbox="fbm">
-                <Image
-                  src="/works/blksImg/th_3.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-              <a href="/works/blksImg/4.png" data-lightbox="fbm">
-                <Image
-                  src="/works/blksImg/th_4.png"
-                  width="240"
-                  height="150"
-                  className="Lthumb"
-                  alt=""
-                />
-              </a>
-            </div>
-
-            <div id="Rtext">
+          <Grid column={2} gap={16} noBackground noBorder>
+            <GridItem>
+              <Grid column={2}>
+                <GridItem>
+                  <Link href="/works/blksImg/1.png">
+                    <a>
+                      <Image src="/works/blksImg/th_1.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/blksImg/2.png">
+                    <a>
+                      <Image src="/works/blksImg/th_2.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/blksImg/3.png">
+                    <a>
+                      <Image src="/works/blksImg/th_3.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+                <GridItem>
+                  <Link href="/works/blksImg/4.png">
+                    <a>
+                      <Image src="/works/blksImg/th_4.png" width="240" height="150" alt="" />
+                    </a>
+                  </Link>
+                </GridItem>
+              </Grid>
+            </GridItem>
+            <GridItem>
               <p>
                 <b>Blocks</b>
                 <br />
@@ -71,26 +66,27 @@ const works_blocks: NextPage = () => {
                 <br />
                 <br />
                 <br />
-                <a href="https://vimeo.com/96424638" target="_blank" rel="noreferrer">
-                  動画を試聴する(Vimeo)/ Play video(Vimeo)
-                </a>
+                <Link href="https://vimeo.com/96424638">
+                  <a target="_blank" rel="noreferrer">
+                    動画を試聴する(Vimeo)/ Play video(Vimeo)
+                  </a>
+                </Link>
               </p>
-            </div>
+            </GridItem>
+          </Grid>
 
-            <div id="vid" className="clearfix">
-              <iframe
-                src="//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0&color=EEE"
-                width="800"
-                height="450"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
+          <div id="vid" className="clearfix">
+            <iframe
+              src="//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0&color=EEE"
+              width="800"
+              height="450"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
