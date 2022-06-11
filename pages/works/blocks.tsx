@@ -10,10 +10,10 @@ import { Nav } from '@/components/Nav/Nav';
 
 const works_blocks: NextPage = () => {
   const gallery = [
-    { src: '/works/blksImg/1.png', thSrc: '/works/blksImg/th_1.png' },
-    { src: '/works/blksImg/2.png', thSrc: '/works/blksImg/th_2.png' },
-    { src: '/works/blksImg/3.png', thSrc: '/works/blksImg/th_3.png' },
-    { src: '/works/blksImg/4.png', thSrc: '/works/blksImg/th_4.png' },
+    { src: '/works/blks/1.png', thSrc: '/works/blks/th_1.png' },
+    { src: '/works/blks/2.png', thSrc: '/works/blks/th_2.png' },
+    { src: '/works/blks/3.png', thSrc: '/works/blks/th_3.png' },
+    { src: '/works/blks/4.png', thSrc: '/works/blks/th_4.png' },
   ];
   return (
     <div>

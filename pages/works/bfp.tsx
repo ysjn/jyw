@@ -10,10 +10,10 @@ import { Nav } from '@/components/Nav/Nav';
 
 const works_bfp: NextPage = () => {
   const gallery = [
-    { src: '/works/bfpImg/1.jpg', thSrc: '/works/bfpImg/th_1.png' },
-    { src: '/works/bfpImg/2.jpg', thSrc: '/works/bfpImg/th_2.png' },
-    { src: '/works/bfpImg/3.jpg', thSrc: '/works/bfpImg/th_3.png' },
-    { src: '/works/bfpImg/4.jpg', thSrc: '/works/bfpImg/th_4.png' },
+    { src: '/works/bfp/1.jpg', thSrc: '/works/bfp/th_1.png' },
+    { src: '/works/bfp/2.jpg', thSrc: '/works/bfp/th_2.png' },
+    { src: '/works/bfp/3.jpg', thSrc: '/works/bfp/th_3.png' },
+    { src: '/works/bfp/4.jpg', thSrc: '/works/bfp/th_4.png' },
   ];
   return (
     <div>

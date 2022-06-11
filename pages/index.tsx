@@ -32,6 +32,24 @@ const Home: NextPage = () => {
     }, 4000);
   }, [setIntroComplete]);
 
+  const slideshow = [
+    { href: '/works/blocks', src: '/slideshow/1.jpg' },
+    { href: '/works/blocks', src: '/slideshow/2.jpg' },
+    { href: '/works/2032', src: '/slideshow/3.jpg' },
+    { href: '/works/bfp', src: '/slideshow/4.jpg' },
+  ];
+
+  const thumbnails = [
+    { href: '/works/atsum/', src: '/works/atsum/thumbnail.png' },
+    { href: '/works/fbm/', src: '/works/fbm/thumbnail.png' },
+    { href: '/works/2032/', src: '/works/2032/thumbnail.png' },
+    { href: '/works/blocks/', src: '/works/blks/thumbnail.jpg' },
+    { href: '/works/bfp/', src: '/works/bfp/thumbnail.jpg' },
+    {},
+    {},
+    {},
+  ];
+
   return (
     <div className={!introComplete ? styles.Root__introPlaying : undefined}>
       <Head>
@@ -50,75 +68,29 @@ const Home: NextPage = () => {
             showArrows
             infiniteLoop
           >
-            <div>
-              <Link href="/works/blocks">
-                <a>
-                  <Image src="/slideshow/1.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/works/blocks">
-                <a>
-                  <Image src="/slideshow/2.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/works/2032">
-                <a>
-                  <Image src="/slideshow/3.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/works/bfp">
-                <a>
-                  <Image src="/slideshow/4.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </div>
+            {slideshow.map((slide, index) => (
+              <div key={index}>
+                <Link href={slide.href}>
+                  <a>
+                    <Image src={slide.src} layout="fill" alt="" />
+                  </a>
+                </Link>
+              </div>
+            ))}
           </Carousel>
 
           <Grid>
-            <GridItem>
-              <Link href="/works/atsum">
-                <a>
-                  <Image src="/works/thumbs/atsum.png" layout="fill" alt="" />
-                </a>
-              </Link>
-            </GridItem>
-            <GridItem>
-              <Link href="/works/fbm">
-                <a>
-                  <Image src="/works/thumbs/fbm.png" layout="fill" alt="" />
-                </a>
-              </Link>
-            </GridItem>
-            <GridItem>
-              <Link href="/works/2032">
-                <a>
-                  <Image src="/works/thumbs/2032.png" layout="fill" alt="" />
-                </a>
-              </Link>
-            </GridItem>
-            <GridItem>
-              <Link href="/works/blocks">
-                <a>
-                  <Image src="/works/thumbs/blks.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </GridItem>
-            <GridItem>
-              <Link href="/works/bfp">
-                <a>
-                  <Image src="/works/thumbs/bfp.jpg" layout="fill" alt="" />
-                </a>
-              </Link>
-            </GridItem>
-            <GridItem />
-            <GridItem />
-            <GridItem />
+            {thumbnails.map((thumbnail, index) => (
+              <GridItem key={index}>
+                {thumbnail.href && thumbnail.src && (
+                  <Link href={thumbnail.href}>
+                    <a>
+                      <Image src={thumbnail.src} layout="fill" alt="" />
+                    </a>
+                  </Link>
+                )}
+              </GridItem>
+            ))}
           </Grid>
           <div id="contentWrap" className="clearfix"></div>
         </div>

@@ -10,10 +10,10 @@ import { Nav } from '@/components/Nav/Nav';
 
 const works_atsum: NextPage = () => {
   const gallery = [
-    { src: '/works/atsumImg/1.png', thSrc: '/works/atsumImg/th_1.png' },
-    { src: '/works/atsumImg/2.png', thSrc: '/works/atsumImg/th_2.png' },
-    { src: '/works/atsumImg/3.png', thSrc: '/works/atsumImg/th_3.png' },
-    { src: '/works/atsumImg/4.png', thSrc: '/works/atsumImg/th_4.png' },
+    { src: '/works/atsum/1.png', thSrc: '/works/atsum/th_1.png' },
+    { src: '/works/atsum/2.png', thSrc: '/works/atsum/th_2.png' },
+    { src: '/works/atsum/3.png', thSrc: '/works/atsum/th_3.png' },
+    { src: '/works/atsum/4.png', thSrc: '/works/atsum/th_4.png' },
   ];
   return (
     <div>

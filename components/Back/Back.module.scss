@@ -1,5 +1,12 @@
 .Back {
+  display: inline-block;
   margin: 10px;
   font-size: 20px;
   font-weight: bold;
+  color: #bbb;
+  cursor: pointer;
+
+  &:hover {
+    color: #777;
+  }
 }
