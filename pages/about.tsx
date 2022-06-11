@@ -1,22 +1,22 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import styles from './about.module.scss';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
 import { Nav } from '@/components/Nav/Nav';
 
 const About: NextPage = () => {
   return (
-    <div>
+    <div className={styles.About}>
       <Head>
         <title>Jy. About</title>
       </Head>
-
       <Nav />
       <div className="Wrapper">
         <div className="Main">
           <Back />
-          <div id="profile">
+          <div className={styles.About__profile}>
             <p>
               吉田 淳
               <br />
