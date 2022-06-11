@@ -9,12 +9,11 @@ import styles from './index.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import { Footer } from '@/components/Footer/Footer';
-import { Grid } from '@/components/Grid/Grid';
-import { GridItem } from '@/components/Grid/GridItem';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
-import { HAS_VISITED, WORKS, SLIDE_SHOW } from 'lib/constants';
+import { HAS_VISITED, SLIDE_SHOW } from 'lib/constants';
 import { LocalStorageEngine } from 'lib/localStorageEngine';
+import { WorksGrid } from '@/modules/WorksGrid';
 
 const Home: NextPage = () => {
   const [introComplete, setIntroComplete] = useState(false);
@@ -67,25 +66,7 @@ const Home: NextPage = () => {
             ))}
           </Carousel>
 
-          <Grid>
-            {WORKS.map((work, index) => (
-              <GridItem key={index}>
-                {work.href && work.src && (
-                  <Link href={work.href}>
-                    <a style={{ width: '100%' }}>
-                      <Image
-                        src={work.src}
-                        alt={work.alt}
-                        layout="responsive"
-                        width="220"
-                        height="150"
-                      />
-                    </a>
-                  </Link>
-                )}
-              </GridItem>
-            ))}
-          </Grid>
+          <WorksGrid />
         </div>
         <Footer />
       </div>
