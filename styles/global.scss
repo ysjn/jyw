@@ -22,22 +22,11 @@ a {
   }
 }
 
-#logo {
-  position: relative;
-  z-index: 30;
-  margin-top: 0;
-}
-
-ul.list {
-  padding: 0;
-  margin: 0;
-}
-
 /* #wrapperの設定 */
 #wrapper {
   position: relative;
   width: 1000px;
-  margin: 0 auto;
+  margin: 10px auto;
   background: white;
 }
 
@@ -73,6 +62,7 @@ ul.list {
 #contentWrap {
   width: 968px;
   padding: 40px 0;
+  margin: 10px 0;
   border-top: solid 1px #eee;
 }
 
