@@ -13,7 +13,7 @@ import { Grid } from '@/components/Grid/Grid';
 import { GridItem } from '@/components/Grid/GridItem';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
-import { HAS_VISITED } from 'lib/constants';
+import { HAS_VISITED, WORKS } from 'lib/constants';
 import { LocalStorageEngine } from 'lib/localStorageEngine';
 
 const Home: NextPage = () => {
@@ -37,17 +37,6 @@ const Home: NextPage = () => {
     { href: '/works/blocks', src: '/slideshow/2.jpg' },
     { href: '/works/2032', src: '/slideshow/3.jpg' },
     { href: '/works/bfp', src: '/slideshow/4.jpg' },
-  ];
-
-  const thumbnails = [
-    { href: '/works/atsum/', src: '/works/atsum/thumbnail.png' },
-    { href: '/works/fbm/', src: '/works/fbm/thumbnail.png' },
-    { href: '/works/2032/', src: '/works/2032/thumbnail.png' },
-    { href: '/works/blocks/', src: '/works/blks/thumbnail.jpg' },
-    { href: '/works/bfp/', src: '/works/bfp/thumbnail.jpg' },
-    {},
-    {},
-    {},
   ];
 
   return (
@@ -80,12 +69,12 @@ const Home: NextPage = () => {
           </Carousel>
 
           <Grid>
-            {thumbnails.map((thumbnail, index) => (
+            {WORKS.map((work, index) => (
               <GridItem key={index}>
-                {thumbnail.href && thumbnail.src && (
-                  <Link href={thumbnail.href}>
+                {work.href && work.src && (
+                  <Link href={work.href}>
                     <a>
-                      <Image src={thumbnail.src} layout="fill" alt="" />
+                      <Image src={work.src} layout="fill" alt="" />
                     </a>
                   </Link>
                 )}
