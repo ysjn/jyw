@@ -23,8 +23,14 @@ const Works: NextPage = () => (
             <GridItem key={index}>
               {work.href && work.src && (
                 <Link href={work.href}>
-                  <a>
-                    <Image src={work.src} layout="fill" alt="" />
+                  <a style={{ width: '100%' }}>
+                    <Image
+                      src={work.src}
+                      alt={work.alt}
+                      layout="responsive"
+                      width="220"
+                      height="150"
+                    />
                   </a>
                 </Link>
               )}

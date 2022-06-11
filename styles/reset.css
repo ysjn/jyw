@@ -80,36 +80,3 @@ abbr,
 acronym {
   border: 0;
 }
-
-/* Begin Typography & Colors */
-
-/* html {
-	overflow: scroll;
-	overflow: -moz-scrollbars-vertical;
-	overflow-x: scroll;
-} */
-
-/* Clearfix */
-.clearfix::after {
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-  content: ' ';
-}
-
-.clearfix {
-  display: inline-block;
-  min-height: 1%;
-}
-
-/* Hides from IE-mac \ */
-* html .clearfix {
-  height: 1%;
-}
-
-.clearfix {
-  display: block;
-}
-
-/* End hide from IE-Mac */

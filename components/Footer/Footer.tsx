@@ -1,22 +1,15 @@
 import Link from 'next/link';
+import styles from './Footer.module.scss';
+
+import { Grid } from '@/components/Grid/Grid';
+import { GridItem } from '@/components/Grid/GridItem';
 
 export const Footer: React.FC = () => (
-  <footer>
-    <div id="bottomFooter" className="clearfix">
-      <div id="footerL">
-        <p>Jun Yoshida Portfolio Website.</p>
-        <p>
-          <a href="https://www.facebook.com/jun.yoshida.775">Facebook</a>
-        </p>
-        <p>
-          <a href="https://twitter.com/Ys_Jn">Twitter</a>
-        </p>
-      </div>
-      <div id="footerR">
+  <footer className={styles.Footer}>
+    <p className={styles.Footer__title}>[Jy.] - Jun Yoshida Portfolio Website.</p>
+    <Grid column={2} noBorder noBackground>
+      <GridItem noCentering>
         <ul>
-          <li>
-            <Link href="/">HOME</Link>
-          </li>
           <li>
             <Link href="/works">WORKS</Link>
           </li>
@@ -24,9 +17,31 @@ export const Footer: React.FC = () => (
             <Link href="/about">ABOUT</Link>
           </li>
         </ul>
-      </div>
-    </div>
-
-    <div id="footer">© 2013 Jun Yoshida All Rights Reserved.</div>
+      </GridItem>
+      <GridItem noCentering>
+        <ul>
+          <li>
+            <p>
+              <a href="https://www.github.com/ysjn">Github</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://www.facebook.com/jun.yoshida.775">Facebook</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://twitter.com/Ys_Jn">Twitter</a>
+            </p>
+          </li>
+        </ul>
+      </GridItem>
+    </Grid>
+    <small className={styles.Footer__copy}>
+      &copy;
+      {` ${new Date().getFullYear()} `}
+      Jun Yoshida All Rights Reserved.
+    </small>
   </footer>
 );

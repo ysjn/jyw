@@ -23,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 150px;
     background-color: #f7f7f7;
     border: 1px solid #eee;
 
@@ -36,6 +35,10 @@
       color: #ccc;
       content: 'n/a';
     }
+  }
+
+  &__itemNoCentering {
+    display: block;
   }
 
   &__noBackground > .Grid__item {

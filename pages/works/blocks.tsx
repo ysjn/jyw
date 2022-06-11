@@ -59,7 +59,7 @@ const works_blocks: NextPage = () => {
               </p>
             </GridItem>
           </Grid>
-          <div id="vid" className="clearfix">
+          <div id="vid">
             <iframe
               src="//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0&color=EEE"
               width="800"

@@ -54,7 +54,13 @@ const Home: NextPage = () => {
               <div key={index}>
                 <Link href={slide.href}>
                   <a>
-                    <Image src={slide.src} layout="fill" alt="" />
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      layout="responsive"
+                      width="900"
+                      height="600"
+                    />
                   </a>
                 </Link>
               </div>
@@ -66,15 +72,20 @@ const Home: NextPage = () => {
               <GridItem key={index}>
                 {work.href && work.src && (
                   <Link href={work.href}>
-                    <a>
-                      <Image src={work.src} layout="fill" alt="" />
+                    <a style={{ width: '100%' }}>
+                      <Image
+                        src={work.src}
+                        alt={work.alt}
+                        layout="responsive"
+                        width="220"
+                        height="150"
+                      />
                     </a>
                   </Link>
                 )}
               </GridItem>
             ))}
           </Grid>
-          <div id="contentWrap" className="clearfix"></div>
         </div>
         <Footer />
       </div>
