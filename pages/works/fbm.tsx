@@ -9,12 +9,17 @@ import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_fbm: NextPage = () => {
+  const gallery = [
+    { src: '/works/fbmImg/1.png', thSrc: '/works/fbmImg/th_1.png' },
+    { src: '/works/fbmImg/2.png', thSrc: '/works/fbmImg/th_2.png' },
+    { src: '/works/fbmImg/3.png', thSrc: '/works/fbmImg/th_3.png' },
+    { src: '/works/fbmImg/4.png', thSrc: '/works/fbmImg/th_4.png' },
+  ];
   return (
     <div>
       <Head>
         <title>Works. FBmonsters</title>
       </Head>
-
       <Nav />
       <div className="Wrapper">
         <div className="Main">
@@ -22,34 +27,15 @@ const works_fbm: NextPage = () => {
           <Grid column={2} gap={16} noBackground noBorder>
             <GridItem>
               <Grid column={2}>
-                <GridItem>
-                  <Link href="/works/fbmImg/1.png">
-                    <a>
-                      <Image src="/works/fbmImg/th_1.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/fbmImg/2.png">
-                    <a>
-                      <Image src="/works/fbmImg/th_2.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/fbmImg/3.png">
-                    <a>
-                      <Image src="/works/fbmImg/th_3.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/fbmImg/4.png">
-                    <a>
-                      <Image src="/works/fbmImg/th_4.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
+                {gallery.map((item, index) => (
+                  <GridItem key={index}>
+                    <Link href={item.src}>
+                      <a>
+                        <Image src={item.thSrc} width="240" height="150" alt="" />
+                      </a>
+                    </Link>
+                  </GridItem>
+                ))}
               </Grid>
             </GridItem>
             <GridItem>
@@ -78,7 +64,6 @@ const works_fbm: NextPage = () => {
             </GridItem>
           </Grid>
         </div>
-
         <Footer />
       </div>
     </div>

@@ -9,6 +9,12 @@ import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_bfp: NextPage = () => {
+  const gallery = [
+    { src: '/works/bfpImg/1.jpg', thSrc: '/works/bfpImg/th_1.png' },
+    { src: '/works/bfpImg/2.jpg', thSrc: '/works/bfpImg/th_2.png' },
+    { src: '/works/bfpImg/3.jpg', thSrc: '/works/bfpImg/th_3.png' },
+    { src: '/works/bfpImg/4.jpg', thSrc: '/works/bfpImg/th_4.png' },
+  ];
   return (
     <div>
       <Head>
@@ -21,34 +27,15 @@ const works_bfp: NextPage = () => {
           <Grid column={2} gap={16} noBackground noBorder>
             <GridItem>
               <Grid column={2}>
-                <GridItem>
-                  <Link href="/works/bfpImg/1.jpg">
-                    <a>
-                      <Image src="/works/bfpImg/th_1.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/bfpImg/2.jpg">
-                    <a>
-                      <Image src="/works/bfpImg/th_2.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/bfpImg/3.jpg">
-                    <a>
-                      <Image src="/works/bfpImg/th_3.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/bfpImg/4.png">
-                    <a>
-                      <Image src="/works/bfpImg/th_4.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
+                {gallery.map((item, index) => (
+                  <GridItem key={index}>
+                    <Link href={item.src}>
+                      <a>
+                        <Image src={item.thSrc} width="240" height="150" alt="" />
+                      </a>
+                    </Link>
+                  </GridItem>
+                ))}
               </Grid>
             </GridItem>
             <GridItem>
@@ -61,7 +48,7 @@ const works_bfp: NextPage = () => {
                 <br />
                 <br />
                 Social Networking sites that we use everyday, are full of our personal information.
-                This is an installation concept aiming to visualise and call an attention for risks
+                This is an installation concept aiming to visualize and call an attention for risks
                 of leaking private information.
                 <br />
                 <br />

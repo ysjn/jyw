@@ -9,6 +9,12 @@ import { GridItem } from '@/components/Grid/GridItem';
 import { Nav } from '@/components/Nav/Nav';
 
 const works_atsum: NextPage = () => {
+  const gallery = [
+    { src: '/works/atsumImg/1.png', thSrc: '/works/atsumImg/th_1.png' },
+    { src: '/works/atsumImg/2.png', thSrc: '/works/atsumImg/th_2.png' },
+    { src: '/works/atsumImg/3.png', thSrc: '/works/atsumImg/th_3.png' },
+    { src: '/works/atsumImg/4.png', thSrc: '/works/atsumImg/th_4.png' },
+  ];
   return (
     <div>
       <Head>
@@ -21,34 +27,15 @@ const works_atsum: NextPage = () => {
           <Grid column={2} gap={16} noBackground noBorder>
             <GridItem>
               <Grid column={2}>
-                <GridItem>
-                  <Link href="/works/atsumImg/1.png">
-                    <a>
-                      <Image src="/works/atsumImg/th_1.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/atsumImg/2.png">
-                    <a>
-                      <Image src="/works/atsumImg/th_2.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/atsumImg/3.png">
-                    <a>
-                      <Image src="/works/atsumImg/th_3.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
-                <GridItem>
-                  <Link href="/works/atsumImg/4.png">
-                    <a>
-                      <Image src="/works/atsumImg/th_4.png" width="240" height="150" alt="" />
-                    </a>
-                  </Link>
-                </GridItem>
+                {gallery.map((item, index) => (
+                  <GridItem key={index}>
+                    <Link href={item.src}>
+                      <a>
+                        <Image src={item.thSrc} width="240" height="150" alt="" />
+                      </a>
+                    </Link>
+                  </GridItem>
+                ))}
               </Grid>
             </GridItem>
             <GridItem>
@@ -67,11 +54,7 @@ const works_atsum: NextPage = () => {
                 <br />
                 <br />
                 <br />
-                <Link
-                  href="http://www.idd.tamabi.ac.jp/m47069/works/atsumatter/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Link href="http://www.idd.tamabi.ac.jp/m47069/works/atsumatter/" target="_blank">
                   サイトを開く / Launch site
                 </Link>
               </p>
