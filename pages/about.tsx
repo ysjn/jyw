@@ -17,30 +17,54 @@ const About: NextPage = () => {
         <div className="Main">
           <Back />
           <div className={styles.About__profile}>
-            <p>
-              吉田 淳
-              <br />
-              <br />
-              1991年 9月7日 生まれ
-              <br />
-              <br />
-              2011年 4月 - 2015年 3月 | 多摩美術大学 情報デザイン学科 情報デザインコース 入学
-              <br />
-              2013年 9月 - 2014年 1月 | スウェーデン マルメ大学 大学院
-              インタラクションデザインコース 留学
-              <br />
-              <br />
-              <br />
-              Jun Yoshida
-              <br />
-              <br />
-              1991 Sep. 7 Birth.
-              <br />
-              <br />
-              2011 Apr. - 2015 Mar.| Tama Art University Interaction Design Dept.
-              <br />
-              2013 Sep. - 2014 Jan. | Malmö Högskola, IxD Masters Course, Sweden. Exchange Study.
-            </p>
+            <div className="util-Margin--32">
+              <p className="util-Margin--16">
+                吉田 淳
+                <br />
+                1991年 9月7日 生まれ
+              </p>
+              <table>
+                <tr>
+                  <td>2011年 4月 - 2015年 3月</td>
+                  <td> | </td>
+                  <td>多摩美術大学 情報デザイン学科 情報デザインコース 入学</td>
+                </tr>
+                <tr>
+                  <td>2013年 9月 - 2014年 1月</td>
+                  <td> | </td>
+                  <td>スウェーデン マルメ大学 大学院 インタラクションデザインコース 留学</td>
+                </tr>
+                <tr>
+                  <td>2015年 4月 - 現在</td>
+                  <td> | </td>
+                  <td>ヤフー株式会社 検索統括本部</td>
+                </tr>
+              </table>
+            </div>
+            <div className="util-Margin--32">
+              <p className="util-Margin--16">
+                Jun Yoshida
+                <br />
+                1991 Sep. 7 Birth.
+              </p>
+              <table>
+                <tr>
+                  <td>2011 Apr. - 2015 Mar. </td>
+                  <td> | </td>
+                  <td>Tama Art University Interaction Design Dept.</td>
+                </tr>
+                <tr>
+                  <td>2013 Sep. - 2014 Jan.</td>
+                  <td> | </td>
+                  <td>Malmö Högskola, IxD Masters Course, Sweden. Exchange Study.</td>
+                </tr>
+                <tr>
+                  <td>2015 Apr. - Present</td>
+                  <td> | </td>
+                  <td>Yahoo JAPAN Corporation Web Search Department</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
         <Footer />

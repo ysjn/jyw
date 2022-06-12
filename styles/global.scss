@@ -40,3 +40,9 @@ figure {
   margin: 0 auto;
   color: #777;
 }
+
+@for $i from 1 to 10 {
+  .util-Margin--#{$i * 4} {
+    margin-bottom: #{$i * 4}px;
+  }
+}
