@@ -10,6 +10,20 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
+  @media screen and (max-width: 600px) {
+    &__col2 {
+      grid-template-columns: repeat(1, 1fr);
+
+      .Grid__col2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__col4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__gap8 {
     gap: 8px;
   }
