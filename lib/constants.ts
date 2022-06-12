@@ -134,7 +134,6 @@ export const WORKS = [
     tags: ['arduino', 'Group work', 'Undergraduate'],
   },
   {},
-  {},
 ];
 
 // remove duplicate from string array
