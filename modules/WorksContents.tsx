@@ -32,7 +32,6 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
     return null;
   }
   const lightBoxImages = data.gallery?.map((image) => image.src) || [];
-  const lightBoxAlts = data.gallery?.map((image) => ({ alt: image.alt })) || [];
   return (
     <div>
       {data.title && (
@@ -76,7 +75,6 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
         <FsLightBox
           toggler={lightBoxControl.isOpen}
           sources={lightBoxImages}
-          customAttributes={lightBoxAlts}
           slide={lightBoxControl.currentIndex}
         />
         <Footer />
