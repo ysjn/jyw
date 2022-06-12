@@ -17,8 +17,8 @@ const About: NextPage = () => {
         <div className="Main">
           <Back />
           <div className={styles.About__profile}>
-            <div className="util-Margin--32">
-              <p className="util-Margin--16">
+            <div className="util-MarginBottom--32">
+              <p className="util-MarginBottom--16">
                 吉田 淳
                 <br />
                 1991年 9月7日 生まれ
@@ -41,8 +41,8 @@ const About: NextPage = () => {
                 </tr>
               </table>
             </div>
-            <div className="util-Margin--32">
-              <p className="util-Margin--16">
+            <div className="util-MarginBottom--32">
+              <p className="util-MarginBottom--16">
                 Jun Yoshida
                 <br />
                 1991 Sep. 7 Birth.

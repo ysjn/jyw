@@ -36,6 +36,14 @@
     }
   }
 
+  &__vaStart &__item {
+    align-items: flex-start;
+  }
+
+  &__vaEnd &__item {
+    align-items: flex-end;
+  }
+
   &__itemNoCentering {
     display: block;
   }

@@ -26,7 +26,7 @@ const works_blocks: NextPage = () => {
       <div className="Wrapper">
         <div className="Main">
           <Back />
-          <Grid column={2} gap={16} noBackground noBorder>
+          <Grid column={2} gap={16} vAlign="start" noBackground noBorder>
             {data.gallery && (
               <GridItem>
                 <Grid column={2}>
@@ -43,24 +43,16 @@ const works_blocks: NextPage = () => {
               </GridItem>
             )}
             <GridItem>
-              <p>
-                <b>{data.title}</b>
-                <br />
-                <br />
-                {data.descJp}
-                <br />
-                <br />
-                <br />
-                {data.descEn}
-                <br />
-                <br />
-                <br />
+              <section className="util-MarginTop--16">
+                <h1 className="util-MarginBottom--32">{data.title}</h1>
+                <p className="util-MarginBottom--16">{data.descJp}</p>
+                <p className="util-MarginBottom--16">{data.descEn}</p>
                 {data.siteUrl && (
                   <Link href={data.siteUrl} target="_blank">
                     サイトを開く / Launch site
                   </Link>
                 )}
-              </p>
+              </section>
             </GridItem>
           </Grid>
 
