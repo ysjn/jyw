@@ -9,7 +9,7 @@
     fill: none;
     stroke-dasharray: 500px;
     stroke-dashoffset: 500px;
-    animation: line-animation 4s both;
+    animation: path-animation 4s both;
   }
 
   circle {
@@ -19,7 +19,31 @@
     animation: circle-animation 2s 1s both;
   }
 
-  @keyframes line-animation {
+  &__small {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__noAnimation {
+    &,
+    path,
+    circle {
+      animation: none;
+    }
+
+    path {
+      fill: #000;
+      stroke-dashoffset: 0;
+    }
+
+    circle {
+      stroke: #000;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes path-animation {
     0% {
       fill: transparent;
       stroke-dashoffset: 500px;

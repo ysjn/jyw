@@ -9,9 +9,39 @@
   justify-content: space-between;
   width: 100%;
   padding: 8px 16px;
-  background: white;
+  background: #fff;
   box-shadow: 0 1px 8px #aaa;
   opacity: 0.9;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    path {
+      fill: #ddd;
+      stroke: transparent;
+    }
+
+    circle {
+      stroke: #ddd;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      path {
+        fill: #777;
+      }
+
+      circle {
+        stroke: #777;
+      }
+    }
+  }
 
   &__home {
     animation: enter-animation 1s 3.5s both;
@@ -19,25 +49,6 @@
 
   &__noAnim {
     animation: none;
-  }
-
-  &__icon {
-    z-index: 30;
-    width: 28px;
-    height: 28px;
-    min-height: 20px;
-    font-size: 20px;
-    font-style: italic;
-    color: #ddd;
-    text-align: center;
-    cursor: pointer;
-    border: 3px solid #ddd;
-    border-radius: 25px;
-
-    &:hover {
-      color: #777;
-      border-color: #777;
-    }
   }
 
   &__menu {
