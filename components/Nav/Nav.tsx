@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import router from 'next/router';
+import { Logo } from '../Logo/Logo';
 import styles from './Nav.module.scss';
 import { HAS_VISITED } from 'lib/constants';
 import { LocalStorageEngine } from 'lib/localStorageEngine';
@@ -29,8 +30,8 @@ export const Nav: React.FC<NavProps> = (props) => {
         props.noAnimation ? styles.Nav__noAnim : ''
       }`}
     >
-      <div onClick={clearHasVisited}>
-        <div className={styles.Nav__icon}>Jy.</div>
+      <div className={styles.Nav__logo} onClick={clearHasVisited}>
+        <Logo small noAnimation />
       </div>
       <nav>
         <ul className={styles.Nav__menu}>

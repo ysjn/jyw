@@ -56,11 +56,9 @@ const works_blocks: NextPage = () => {
             </GridItem>
           </Grid>
 
-          <div id="vid">
+          <div className="Video">
             <iframe
-              src="//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0&color=EEE"
-              width="800"
-              height="450"
+              src="//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0"
               frameBorder="0"
               allowFullScreen
             ></iframe>

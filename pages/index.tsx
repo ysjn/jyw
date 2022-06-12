@@ -42,10 +42,11 @@ const Home: NextPage = () => {
       <div className="Wrapper">
         <div className="Main">
           <Carousel
-            swipeable={false}
             showStatus={false}
             showThumbs={false}
             autoPlay={introComplete}
+            swipeable
+            emulateTouch
             showArrows
             infiniteLoop
           >

@@ -50,6 +50,23 @@ figure {
   color: #777;
 }
 
+.Video {
+  position: relative;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.carousel .control-dots li.dot {
+  box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+}
+
 @for $i from 1 to 10 {
   .util-MarginTop--#{$i * 4} {
     margin-top: #{$i * 4}px;
