@@ -1,7 +1,6 @@
 import FsLightBox from 'fslightbox-react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
@@ -31,7 +30,9 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
   if (!data) {
     return null;
   }
+
   const lightBoxImages = data.gallery?.map((image) => image.src) || [];
+
   return (
     <div>
       {data.title && (
@@ -63,9 +64,9 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
                 <p className="util-MarginBottom--16">{data.descJp}</p>
                 <p className="util-MarginBottom--16">{data.descEn}</p>
                 {data.siteUrl && (
-                  <Link href={data.siteUrl} target="_blank">
+                  <a href={data.siteUrl} target="_blank" rel="noopener noreferrer">
                     サイトを開く / Launch site
-                  </Link>
+                  </a>
                 )}
               </section>
             </GridItem>
