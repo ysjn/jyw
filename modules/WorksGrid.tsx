@@ -12,6 +12,7 @@ import { WORKS, FILTERS } from 'lib/constants';
 export const WorksGrid = () => {
   const [checkedArray, setCheckedArray] = useState(FILTERS.map(() => false));
   const [currentFilter, setCurrentFilter] = useState<string[]>([]);
+  const [animate, setAnimate] = useState(false);
 
   const onClick = (index: number) => {
     const newArray = [...checkedArray];
@@ -25,6 +26,8 @@ export const WorksGrid = () => {
     ).filter((filter): filter is string => typeof filter === 'string');
 
     setCurrentFilter(filters);
+    setAnimate(false);
+    setTimeout(() => setAnimate(true), 0);
   }, [checkedArray]);
 
   return (
@@ -43,7 +46,7 @@ export const WorksGrid = () => {
         {WORKS.filter((work) =>
           currentFilter.length ? currentFilter.some((filter) => work.tags?.includes(filter)) : true,
         ).map((work, index) => (
-          <GridItem key={index}>
+          <GridItem animate={animate} key={index}>
             {work.href && work.src && (
               <Link href={work.href}>
                 <a style={{ width: '100%' }}>
