@@ -11,9 +11,9 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Footer } from '@/components/Footer/Footer';
 import { Logo } from '@/components/Logo/Logo';
 import { Nav } from '@/components/Nav/Nav';
+import { WorksGrid } from '@/modules/WorksGrid';
 import { HAS_VISITED, SLIDE_SHOW } from 'lib/constants';
 import { LocalStorageEngine } from 'lib/localStorageEngine';
-import { WorksGrid } from '@/modules/WorksGrid';
 
 const Home: NextPage = () => {
   const [introComplete, setIntroComplete] = useState(false);
