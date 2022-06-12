@@ -1,4 +1,4 @@
-import FsLightBox from 'fslightBox-react'; // eslint-disable-line import/no-unresolved
+import FsLightBox from 'fslightbox-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
