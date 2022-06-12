@@ -26,12 +26,12 @@
       "@/modules/*": [
         "modules/*"
       ]
-    }
+    },
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
   ],
   "exclude": [
     "node_modules"

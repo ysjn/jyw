@@ -22,17 +22,27 @@ export const Footer: React.FC = () => (
         <ul>
           <li>
             <p>
-              <a href="https://www.github.com/ysjn">Github</a>
+              <a href="https://www.github.com/ysjn" target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
             </p>
           </li>
           <li>
             <p>
-              <a href="https://www.facebook.com/jun.yoshida.775">Facebook</a>
+              <a
+                href="https://www.facebook.com/jun.yoshida.775"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
             </p>
           </li>
           <li>
             <p>
-              <a href="https://twitter.com/Ys_Jn">Twitter</a>
+              <a href="https://twitter.com/Ys_Jn" target="_blank" rel="noopener noreferrer">
+                Twitter
+              </a>
             </p>
           </li>
         </ul>
