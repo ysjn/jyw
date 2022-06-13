@@ -4,7 +4,7 @@ import { WorksContents } from '@/modules/WorksContents';
 import { WORKS } from 'lib/constants';
 
 const boldit: NextPage = () => {
-  const data = WORKS.find((work) => work.id === 'tabs');
+  const data = WORKS.find((work) => work.id === 'boldit');
   if (!data) {
     return null;
   }

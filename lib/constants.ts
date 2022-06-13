@@ -45,7 +45,7 @@ export const WORKS = [
       { src: '/works/boldit/3.png', thSrc: '/works/boldit/th_3.png', alt: 'bold-id thumbnail 3' },
       { src: '/works/boldit/4.png', thSrc: '/works/boldit/th_4.png', alt: 'bold-id thumbnail 4' },
     ],
-    tags: ['Individual work', 'Sketch'],
+    tags: ['Individual work', 'Sketch', 'JavaScript'],
   },
   {
     id: 'atsumatter',
