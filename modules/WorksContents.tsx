@@ -2,6 +2,8 @@ import FsLightBox from 'fslightbox-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Back } from '@/components/Back/Back';
 import { Footer } from '@/components/Footer/Footer';
 import { Grid } from '@/components/Grid/Grid';
@@ -68,9 +70,30 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
           </Grid>
           {props.data.videos &&
             props.data.videos.map((video, index) => (
-              <div className="Video" key={index}>
+              <div className="Video util-AspectRatio--16x9" key={index}>
                 <iframe src={video.src} frameBorder="0" allowFullScreen />
               </div>
+            ))}
+          {props.data.md &&
+            props.data.md.map((md, index) => (
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  p: ({ node, ...props }) => <p className="util-MarginBottom--16" {...props} />,
+                  img: ({ node, ...props }) =>
+                    props.src && props.alt ? (
+                      <span className="util-AspectRatio--16x9">
+                        <Image src={props.src} alt={props.alt} layout="fill" objectFit="contain" />
+                      </span>
+                    ) : (
+                      // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+                      <img {...props} style={{ width: '100%' }} />
+                    ),
+                }}
+                key={index}
+              >
+                {md}
+              </ReactMarkdown>
             ))}
           {props.children}
         </div>

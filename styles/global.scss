@@ -50,21 +50,57 @@ figure {
   color: #777;
 }
 
-.Video {
-  position: relative;
-  padding-top: 56.25%;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.Video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel .control-dots li.dot {
   box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+}
+
+[class*='util-AspectRatio--'] {
+  position: relative;
+  display: block;
+}
+
+.util-AspectRatio--16x9 {
+  --aspect-ratio-16-9: 16/9;
+
+  padding-top: calc((1 / (var(--aspect-ratio-16-9))) * 100%);
+}
+
+.util-AspectRatio--4x3 {
+  --aspect-ratio-4-3: 4/3;
+
+  padding-top: calc((1 / (var(--aspect-ratio-4-3))) * 100%);
+}
+
+.util-AspectRatio--1x1 {
+  --aspect-ratio-1-1: 1/1;
+
+  padding-top: calc((1 / (var(--aspect-ratio-1-1))) * 100%);
+}
+
+@supports (aspect-ratio: 1) {
+  [class*='util-AspectRatio--'] {
+    padding-top: initial;
+  }
+
+  .util-AspectRatio--16x9 {
+    aspect-ratio: var(--aspect-ratio-16-9);
+  }
+
+  .util-AspectRatio--4x3 {
+    aspect-ratio: var(--aspect-ratio-4-3);
+  }
+
+  .util-AspectRatio--1x1 {
+    aspect-ratio: var(--aspect-ratio-1-1);
+  }
 }
 
 @for $i from 1 to 10 {
