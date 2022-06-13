@@ -6,6 +6,7 @@ export const SLIDE_SHOW = [
   { href: '/works/2032', src: '/slideshow/2032.jpg', alt: '' },
   { href: '/works/bfp', src: '/slideshow/bfp.jpg', alt: '' },
   { href: '/works/tabs', src: '/slideshow/tabs.png', alt: '' },
+  { href: '/works/gagababa', src: '/slideshow/gagababa.png', alt: '' },
 ];
 
 export const WORKS = [
@@ -187,7 +188,45 @@ export const WORKS = [
     ],
     tags: ['arduino', 'Group work', 'Undergraduate'],
   },
-  {},
+  {
+    id: 'gagababa',
+    href: '/works/gagababa/',
+    src: '/works/gagababa/thumbnail.png',
+    alt: 'ががばば / Gagababa',
+    title: 'ががばば / Gagababa',
+    descJp:
+      '「ががばば」はフジテレビの「世にも奇妙な物語」連動企画です。謎の「ががばば」という単語で検索すると、ホラー演出と共に世にも奇妙な物語の特設サイトへ誘導します。会社史上1日に最も検索された単語としてレコードに載りました。',
+    descEn:
+      '"Gagababa" is a collaborative horror taste campaign with Fuji TV, which encourages people to search for a mysterious phrase “Gagababa” linked to a TV show. Achieved the greatest number of searches per day in company history.',
+    siteUrl: 'https://www.appbank.net/2015/11/05/iphone-application/1120102.php',
+    gallery: [
+      {
+        src: '/works/gagababa/1.png',
+        thSrc: '/works/gagababa/th_1.png',
+        alt: 'gagababa thumbnail 1',
+      },
+      {
+        src: '/works/gagababa/2.png',
+        thSrc: '/works/gagababa/th_2.png',
+        alt: 'gagababa thumbnail 2',
+      },
+      {
+        src: '/works/gagababa/3.jpg',
+        thSrc: '/works/gagababa/th_3.png',
+        alt: 'gagababa thumbnail 3',
+      },
+      {
+        src: '/works/gagababa/4.jpg',
+        thSrc: '/works/gagababa/th_4.png',
+        alt: 'gagababa thumbnail 4',
+      },
+    ],
+    videos: [
+      { src: 'https://www.youtube.com/embed/zyhHW7L5X7Q' },
+      { src: 'https://www.youtube.com/embed/b48vBXIAKus' },
+    ],
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
 ];
 
 // remove duplicate from string array
