@@ -3,7 +3,11 @@ import { WorksContents } from '@/modules/WorksContents';
 import { WORKS } from 'lib/constants';
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = WORKS.filter((work) => work.id).map((work) => ({ params: { id: work.id } }));
+  const excludePaths = ['boldit', 'tabs'];
+  const paths = WORKS.filter((work) => work.id && !excludePaths.includes(work.id)).map((work) => ({
+    params: { id: work.id },
+  }));
+
   return {
     paths,
     fallback: false,
