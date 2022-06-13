@@ -3,13 +3,13 @@ import Image from 'next/image';
 import { WorksContents } from '@/modules/WorksContents';
 import { WORKS } from 'lib/constants';
 
-const works_tabs: NextPage = () => {
+const tabs: NextPage = () => {
   const data = WORKS.find((work) => work.id === 'tabs');
   if (!data) {
     return null;
   }
   return (
-    <WorksContents id="tabs">
+    <WorksContents data={data}>
       <div style={{ maxWidth: 600 }}>
         {data.gallery?.[1] && (
           <figure>
@@ -55,4 +55,4 @@ const works_tabs: NextPage = () => {
   );
 };
 
-export default works_tabs;
+export default tabs;
