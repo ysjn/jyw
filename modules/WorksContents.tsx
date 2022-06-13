@@ -10,7 +10,7 @@ import { Nav } from '@/components/Nav/Nav';
 import { WORKS } from 'lib/constants';
 
 interface WorksContentsProps {
-  id: string;
+  data: typeof WORKS extends (infer U)[] ? U : never;
   children?: React.ReactNode;
 }
 export const WorksContents: React.FC<WorksContentsProps> = (props) => {
@@ -26,18 +26,13 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
     });
   };
 
-  const data = WORKS.find((work) => work.id === props.id);
-  if (!data) {
-    return null;
-  }
-
-  const lightBoxImages = data.gallery?.map((image) => image.src) || [];
+  const lightBoxImages = props.data.gallery?.map((image) => image.src) || [];
 
   return (
     <div>
-      {data.title && (
+      {props.data.title && (
         <Head>
-          <title>{`Works. ${data.title}`}</title>
+          <title>{`Works. ${props.data.title}`}</title>
         </Head>
       )}
       <Nav />
@@ -45,10 +40,10 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
         <div className="Main">
           <Back />
           <Grid column={2} gap={16} vAlign="start" noBackground noBorder>
-            {data.gallery && (
+            {props.data.gallery && (
               <GridItem>
                 <Grid column={2}>
-                  {data.gallery.map((image, index) => (
+                  {props.data.gallery.map((image, index) => (
                     <GridItem key={index}>
                       <div onClick={() => openLightBox(index + 1)} style={{ cursor: 'pointer' }}>
                         <Image src={image.thSrc} width="240" height="150" alt={image.alt} />
@@ -60,17 +55,23 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
             )}
             <GridItem>
               <section className="util-MarginTop--16">
-                <h1 className="util-MarginBottom--32">{data.title}</h1>
-                <p className="util-MarginBottom--16">{data.descJp}</p>
-                <p className="util-MarginBottom--16">{data.descEn}</p>
-                {data.siteUrl && (
-                  <a href={data.siteUrl} target="_blank" rel="noopener noreferrer">
+                <h1 className="util-MarginBottom--32">{props.data.title}</h1>
+                <p className="util-MarginBottom--16">{props.data.descJp}</p>
+                <p className="util-MarginBottom--16">{props.data.descEn}</p>
+                {props.data.siteUrl && (
+                  <a href={props.data.siteUrl} target="_blank" rel="noopener noreferrer">
                     サイトを開く / Launch site
                   </a>
                 )}
               </section>
             </GridItem>
           </Grid>
+          {props.data.videos &&
+            props.data.videos.map((video, index) => (
+              <div className="Video" key={index}>
+                <iframe src={video.src} frameBorder="0" allowFullScreen />
+              </div>
+            ))}
           {props.children}
         </div>
         <FsLightBox

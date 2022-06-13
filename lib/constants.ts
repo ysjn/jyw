@@ -112,6 +112,11 @@ export const WORKS = [
       { src: '/works/blks/3.png', thSrc: '/works/blks/th_3.png', alt: '' },
       { src: '/works/blks/4.png', thSrc: '/works/blks/th_4.png', alt: '' },
     ],
+    videos: [
+      {
+        src: '//player.vimeo.com/video/96424638?portrait=0&title=0&badge=0&byline=0',
+      },
+    ],
     tags: ['arduino', 'Individual work', 'Undergraduate'],
   },
   {
