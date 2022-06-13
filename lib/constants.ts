@@ -26,6 +26,14 @@ export const WORKS = [
       { src: '/works/tabs/3.gif', thSrc: '/works/tabs/th_3.png', alt: 'tabs thumbnail 3' },
       { src: '/works/tabs/4.gif', thSrc: '/works/tabs/th_4.png', alt: 'tabs thumbnail 4' },
     ],
+    md: [
+      `ホバーでタブをプレビュー / Hover to quickly preview tabs.
+       ![ホバーでタブをプレビュー / Hover to quickly preview tabs.](/works/tabs/2.gif)`,
+      `複数のウィンドウを管理 / Multiple window support.
+       ![複数のウィンドウを管理 / Multiple window support.](/works/tabs/3.gif)`,
+      `グリッド(またはカラム)ビューでウィンドウを俯瞰 / Grid (or column) layout for multiple windows overview.
+       ![グリッド(またはカラム)ビューでウィンドウを俯瞰 / Grid (or column) layout for multiple windows overview.](/works/tabs/4.gif)`,
+    ],
     tags: ['Individual work', 'Chrome extension', 'TypeScript', 'React'],
   },
   {
@@ -45,6 +53,7 @@ export const WORKS = [
       { src: '/works/boldit/3.png', thSrc: '/works/boldit/th_3.png', alt: 'bold-id thumbnail 3' },
       { src: '/works/boldit/4.png', thSrc: '/works/boldit/th_4.png', alt: 'bold-id thumbnail 4' },
     ],
+    md: ['![bold-it working image](/works/boldit/bold-it.gif)'],
     tags: ['Individual work', 'Sketch', 'JavaScript'],
   },
   {
