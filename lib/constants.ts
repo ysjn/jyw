@@ -1,12 +1,12 @@
 export const HAS_VISITED = 'jyw.has.visited';
 
 export const SLIDE_SHOW = [
-  { href: '/works/blocks', src: '/slideshow/blocks1.jpg', alt: '' },
-  { href: '/works/blocks', src: '/slideshow/blocks2.jpg', alt: '' },
-  { href: '/works/2032', src: '/slideshow/2032.jpg', alt: '' },
-  { href: '/works/bfp', src: '/slideshow/bfp.jpg', alt: '' },
-  { href: '/works/tabs', src: '/slideshow/tabs.png', alt: '' },
-  { href: '/works/gagababa', src: '/slideshow/gagababa.png', alt: '' },
+  { href: '/works/blocks', src: '/slideshow/blocks1.jpg', alt: 'blocks' },
+  { href: '/works/blocks', src: '/slideshow/blocks2.jpg', alt: 'blocks' },
+  { href: '/works/2032', src: '/slideshow/2032.jpg', alt: '2032' },
+  { href: '/works/bfp', src: '/slideshow/bfp.jpg', alt: 'binary fingerprints' },
+  { href: '/works/tabs', src: '/slideshow/tabs.png', alt: 'tabs' },
+  { href: '/works/gagababa', src: '/slideshow/gagababa.png', alt: 'gagababa' },
 ];
 
 export const WORKS = [
