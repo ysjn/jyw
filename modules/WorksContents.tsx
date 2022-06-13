@@ -70,7 +70,7 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
           </Grid>
           {props.data.videos &&
             props.data.videos.map((video, index) => (
-              <div className="Video util-AspectRatio--16x9" key={index}>
+              <div className="Video util-AspectRatio--16x9 util-MarginBottom--16" key={index}>
                 <iframe src={video.src} frameBorder="0" allowFullScreen />
               </div>
             ))}
