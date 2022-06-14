@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Back } from '@/components/Back/Back';
+import { Badge } from '@/components/Badge/Badge';
 import { Footer } from '@/components/Footer/Footer';
 import { Grid } from '@/components/Grid/Grid';
 import { GridItem } from '@/components/Grid/GridItem';
@@ -60,6 +61,14 @@ export const WorksContents: React.FC<WorksContentsProps> = (props) => {
                 <h1 className="util-MarginBottom--32">{props.data.title}</h1>
                 <p className="util-MarginBottom--16">{props.data.descJp}</p>
                 <p className="util-MarginBottom--16">{props.data.descEn}</p>
+                {props.data.tags && (
+                  <p className="util-MarginBottom--16">
+                    tags:&nbsp;
+                    {props.data.tags.map((tag, index) => (
+                      <Badge key={index}>{tag}</Badge>
+                    ))}
+                  </p>
+                )}
                 {props.data.siteUrl && (
                   <a href={props.data.siteUrl} target="_blank" rel="noopener noreferrer">
                     サイトを開く / Launch site
