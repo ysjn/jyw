@@ -45,7 +45,7 @@
     }
 
     &:empty::before {
-      color: #ccc;
+      color: var(--color-text-tertiary);
       content: 'n/a';
     }
   }
