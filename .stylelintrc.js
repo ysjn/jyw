@@ -10,5 +10,6 @@ module.exports = {
   rules: {
     'selector-id-pattern': null,
     'selector-class-pattern': null,
+    'no-descending-specificity': null,
   },
 };

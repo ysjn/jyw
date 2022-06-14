@@ -1,0 +1,12 @@
+.Badge {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 10px;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  & + & {
+    margin-left: 4px;
+  }
+}
