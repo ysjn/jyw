@@ -1,11 +1,32 @@
+html {
+  --color-bg: #fff;
+  --color-bg-primary: #f5f5f5;
+  --color-bg-secondary: #777;
+  --color-bg-tertiary: #ddd;
+  --color-text-primary: #444;
+  --color-text-secondary: #777;
+  --color-text-tertiary: #bbb;
+  --color-text-primary-inverted: #fff;
+  --color-border-primary: #bbb;
+  --color-border-primary-hover: #777;
+  --color-border-secondary: #eee;
+  --color-border-secondary-hover: #bbb;
+  --color-box-shadow-primary: #bbb;
+  --color-link-primary: rgba(0 0 0 / 30%);
+  --color-link-primary-hover: rgba(0 0 0 / 60%);
+  --aspect-ratio-16-9: 16/9;
+  --aspect-ratio-4-3: 4/3;
+  --aspect-ratio-1-1: 1/1;
+}
+
 body {
   width: 100%;
   margin: 0;
   font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 12px;
   font-weight: lighter;
-  color: #fff;
-  background: #f5f5f5;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
 }
 
 h1 {
@@ -18,11 +39,11 @@ p {
 }
 
 a {
-  color: #bbb;
+  color: var(--color-link-primary);
   text-decoration: none;
 
   &:hover {
-    color: #777;
+    color: var(--color-link-primary-hover);
     text-decoration: none;
   }
 }
@@ -39,7 +60,7 @@ figure {
   max-width: 1000px;
   min-height: calc(100vh - 60px);
   margin: 60px auto 0;
-  background: #fff;
+  background: var(--color-bg);
 }
 
 .Main {
@@ -47,7 +68,7 @@ figure {
   width: 100%;
   padding: 16px;
   margin: 0 auto;
-  color: #777;
+  color: var(--color-text-secondary);
 }
 
 .Video iframe {
@@ -68,20 +89,14 @@ figure {
 }
 
 .util-AspectRatio--16x9 {
-  --aspect-ratio-16-9: 16/9;
-
   padding-top: calc((1 / (var(--aspect-ratio-16-9))) * 100%);
 }
 
 .util-AspectRatio--4x3 {
-  --aspect-ratio-4-3: 4/3;
-
   padding-top: calc((1 / (var(--aspect-ratio-4-3))) * 100%);
 }
 
 .util-AspectRatio--1x1 {
-  --aspect-ratio-1-1: 1/1;
-
   padding-top: calc((1 / (var(--aspect-ratio-1-1))) * 100%);
 }
 

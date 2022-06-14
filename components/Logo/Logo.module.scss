@@ -7,6 +7,7 @@
 
   path {
     fill: none;
+    stroke: var(--color-text-primary);
     stroke-dasharray: 500px;
     stroke-dashoffset: 500px;
     animation: path-animation 4s both;
@@ -33,12 +34,12 @@
     }
 
     path {
-      fill: #000;
+      fill: var(--color-text-primary);
       stroke-dashoffset: 0;
     }
 
     circle {
-      stroke: #000;
+      stroke: var(--color-text-primary);
       stroke-dashoffset: 0;
     }
   }
@@ -54,7 +55,7 @@
     }
 
     100% {
-      fill: #000;
+      fill: var(--color-text-primary);
       stroke-dashoffset: 0;
     }
   }
@@ -66,7 +67,7 @@
     }
 
     100% {
-      stroke: #000;
+      stroke: var(--color-text-primary);
       stroke-dashoffset: 0;
     }
   }

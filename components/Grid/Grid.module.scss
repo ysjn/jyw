@@ -37,15 +37,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f7f7f7;
-    border: 1px solid #eee;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-secondary);
 
     &:not(:empty):hover {
-      border: 1px solid #777;
+      border: 1px solid var(--color-border-secondary-hover);
     }
 
     &:empty::before {
-      color: #ccc;
+      color: var(--color-text-tertiary);
       content: 'n/a';
     }
   }
