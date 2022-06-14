@@ -2,10 +2,10 @@
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  color: #bbb;
+  color: var(--color-link-primary);
 
   &:hover {
-    color: #777;
+    color: var(--color-link-primary-hover);
     cursor: pointer;
   }
 }
