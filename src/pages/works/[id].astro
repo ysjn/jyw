@@ -1,0 +1,23 @@
+---
+import WorksContents from '@modules/WorksContents.astro';
+import { WORKS } from 'lib/constants';
+
+// interface WorksProps {
+//   data: typeof WORKS extends (infer U)[] ? U : never;
+// }
+
+export function getStaticPaths() {
+  return WORKS.filter((work) => work.id).map((work) => {
+    return {
+      params: {
+        id: work.id,
+      },
+      props: { ...work },
+    };
+  });
+}
+
+const data = Astro.props;
+---
+
+<WorksContents data={data} />

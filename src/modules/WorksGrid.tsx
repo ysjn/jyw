@@ -1,13 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-import { useEffect, useState } from 'react';
-import { Chips } from '@/components/Chips/Chips';
-import { ChipsItem } from '@/components/Chips/ChipsItem';
-import { Grid } from '@/components/Grid/Grid';
-import { GridItem } from '@/components/Grid/GridItem';
+import { Chips } from '@components/Chips/Chips';
+import { ChipsItem } from '@components/Chips/ChipsItem';
+import { Grid } from '@components/Grid/Grid';
+import { GridItem } from '@components/Grid/GridItem';
 
 import { WORKS, FILTERS } from 'lib/constants';
+import { useEffect, useState } from 'react';
 
 export const WorksGrid = () => {
   const [checkedArray, setCheckedArray] = useState(FILTERS.map(() => false));
@@ -48,17 +45,15 @@ export const WorksGrid = () => {
         ).map((work, index) => (
           <GridItem animate={animate} key={index}>
             {work.href && work.src && (
-              <Link href={work.href}>
-                <a style={{ width: '100%' }}>
-                  <Image
-                    src={work.src}
-                    alt={work.alt}
-                    layout="responsive"
-                    width="220"
-                    height="150"
-                  />
-                </a>
-              </Link>
+              <a href={work.href}>
+                <img
+                  src={work.src}
+                  alt={work.alt}
+                  width="220"
+                  height="150"
+                  style={{ verticalAlign: 'top' }}
+                />
+              </a>
             )}
           </GridItem>
         ))}

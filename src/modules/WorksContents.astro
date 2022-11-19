@@ -1,0 +1,62 @@
+---
+import Badge from '@components/Badge.astro';
+import { Grid } from '@components/Grid/Grid';
+import { GridItem } from '@components/Grid/GridItem';
+import { Markdown } from '@components/Markdown';
+import Layout from '@layouts/Layout.astro';
+
+const { props } = Astro;
+---
+
+<Layout title={`Works. ${props.data.title}`}>
+  <Grid column={2} gap={16} vAlign="start" noBackground noBorder>
+    {
+      props.data.gallery && (
+        <GridItem>
+          <Grid column={2}>
+            {props.data.gallery.map((image: any) => (
+              <GridItem>
+                <img src={image.thSrc} width="240" height="150" alt={image.alt} />
+              </GridItem>
+            ))}
+          </Grid>
+        </GridItem>
+      )
+    }
+    <GridItem>
+      <section class="util-MarginTop--16">
+        <h1 class="util-MarginBottom--32">{props.data.title}</h1>
+        <p class="util-MarginBottom--16">{props.data.descJp}</p>
+        <p class="util-MarginBottom--16">{props.data.descEn}</p>
+        {
+          props.data.tags && (
+            <p class="util-MarginBottom--16">
+              tags:&nbsp;
+              {props.data.tags.map((tag: string) => (
+                <Badge>{tag}</Badge>
+              ))}
+            </p>
+          )
+        }
+        {
+          props.data.siteUrl && (
+            <div class="util-MarginTop--16">
+              <a href={props.data.siteUrl} target="_blank" rel="noopener noreferrer">
+                サイトを開く / Launch site
+              </a>
+            </div>
+          )
+        }
+      </section>
+    </GridItem>
+  </Grid>
+  {
+    props.data.videos?.map((video: any) => (
+      <div class="Video util-AspectRatio--16x9 util-MarginBottom--16">
+        <iframe src={video.src} frameborder="0" allowfullscreen />
+      </div>
+    ))
+  }
+  {props.data.md && <Markdown data={props.data.md} />}
+  <slot />
+</Layout>

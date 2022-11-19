@@ -1,0 +1,80 @@
+---
+import { Grid } from '@components/Grid/Grid';
+import { GridItem } from '@components/Grid/GridItem';
+---
+
+<footer>
+  <h3>[Jy.] - Jun Yoshida Portfolio Website.</h3>
+  <Grid column={2} noBorder noBackground>
+    <GridItem noCentering>
+      <ul>
+        <li>
+          <a href="/works">WORKS</a>
+        </li>
+        <li>
+          <a href="/about">ABOUT</a>
+        </li>
+      </ul>
+    </GridItem>
+    <GridItem noCentering>
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.github.com/ysjn" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://www.facebook.com/jun.yoshida.775"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://twitter.com/Ys_Jn" target="_blank" rel="noopener noreferrer">
+              Twitter
+            </a>
+          </p>
+        </li>
+      </ul>
+    </GridItem>
+  </Grid>
+  <small>
+    &copy;{` ${new Date().getFullYear()} `}Jun Yoshida All Rights Reserved.
+  </small>
+</footer>
+
+<style lang="scss">
+  footer {
+    padding: 16px 16px 32px;
+    background-color: var(--color-bg-tertiary);
+
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    small {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 3000;
+      width: 100%;
+      margin-bottom: 16px;
+
+      // FIXME: change after semantic/functional color implementation
+      color: var(--color-link-primary);
+      text-align: center;
+    }
+  }
+</style>

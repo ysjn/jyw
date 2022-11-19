@@ -1,0 +1,75 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="About">
+  <div class="About">
+    <div class="util-MarginBottom--32">
+      <p class="util-MarginBottom--16">
+        吉田 淳
+        <br />
+        1991年 9月7日 生まれ
+      </p>
+      <table>
+        <tr>
+          <td>2011年 4月 - 2015年 3月</td>
+          <td> |</td>
+          <td>多摩美術大学 情報デザイン学科 情報デザインコース 入学</td>
+        </tr>
+        <tr>
+          <td>2013年 9月 - 2014年 1月</td>
+          <td> |</td>
+          <td>スウェーデン マルメ大学 大学院 インタラクションデザインコース 留学</td>
+        </tr>
+        <tr>
+          <td>2015年 4月 - 現在</td>
+          <td> |</td>
+          <td>ヤフー株式会社 検索統括本部</td>
+        </tr>
+      </table>
+    </div>
+    <div class="util-MarginBottom--32">
+      <p class="util-MarginBottom--16">
+        Jun Yoshida
+        <br />
+        1991 Sep. 7 Birth.
+      </p>
+      <table>
+        <tr>
+          <td>2011 Apr. - 2015 Mar.</td>
+          <td> |</td>
+          <td>Tama Art University Interaction Design Dept.</td>
+        </tr>
+        <tr>
+          <td>2013 Sep. - 2014 Jan.</td>
+          <td> |</td>
+          <td>Malmö Högskola, IxD Masters Course, Sweden. Exchange Study.</td>
+        </tr>
+        <tr>
+          <td>2015 Apr. - Present</td>
+          <td> |</td>
+          <td>Yahoo JAPAN Corporation Web Search Department</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .About {
+    width: 800px;
+    padding: 32px 0;
+    margin: 32px auto;
+    font-size: 12px;
+    border: 1px solid var(--color-border-secondary);
+    border-width: 1px 0;
+
+    td:nth-child(2) {
+      padding: 4px 8px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+  }
+</style>

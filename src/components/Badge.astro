@@ -1,0 +1,18 @@
+<span>
+  <slot />
+</span>
+
+<style>
+  span {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 4px;
+
+    & + & {
+      margin-left: 4px;
+    }
+  }
+</style>
