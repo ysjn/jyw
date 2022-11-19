@@ -28,7 +28,7 @@ export const WorksGrid = () => {
   }, [checkedArray]);
 
   return (
-    <>
+    <div style={{ opacity: animate ? 1 : 0, transition: 'opacity 1s' }}>
       <Chips>
         {FILTERS.map((filter, index) => (
           <ChipsItem
@@ -58,6 +58,6 @@ export const WorksGrid = () => {
           </GridItem>
         ))}
       </Grid>
-    </>
+    </div>
   );
 };
