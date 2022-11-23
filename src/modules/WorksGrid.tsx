@@ -6,7 +6,10 @@ import { GridItem } from '@components/Grid/GridItem';
 import { WORKS, FILTERS } from 'lib/constants';
 import { useEffect, useState } from 'react';
 
-export const WorksGrid = () => {
+export const WorksGrid: React.FC<{
+  divider?: boolean;
+  currentId?: string;
+}> = ({ divider, currentId }) => {
   const [checkedArray, setCheckedArray] = useState(FILTERS.map(() => false));
   const [currentFilter, setCurrentFilter] = useState<string[]>([]);
   const [animate, setAnimate] = useState(false);
@@ -28,7 +31,14 @@ export const WorksGrid = () => {
   }, [checkedArray]);
 
   return (
-    <div style={{ opacity: animate ? 1 : 0, transition: 'opacity 1s' }}>
+    <div
+      style={{
+        opacity: animate ? 1 : 0,
+        transition: 'opacity 1s',
+        paddingTop: 16,
+        borderTop: divider ? '1px solid var(--color-border-secondary)' : undefined,
+      }}
+    >
       <Chips>
         {FILTERS.map((filter, index) => (
           <ChipsItem
@@ -42,21 +52,23 @@ export const WorksGrid = () => {
       <Grid>
         {WORKS.filter((work) =>
           currentFilter.length ? currentFilter.some((filter) => work.tags?.includes(filter)) : true,
-        ).map((work, index) => (
-          <GridItem animate={animate} key={index}>
-            {work.href && work.src && (
-              <a href={work.href}>
-                <img
-                  src={work.src}
-                  alt={work.alt}
-                  width="220"
-                  height="150"
-                  style={{ verticalAlign: 'top' }}
-                />
-              </a>
-            )}
-          </GridItem>
-        ))}
+        )
+          .filter((work) => work.id !== currentId)
+          .map((work, index) => (
+            <GridItem animate={animate} key={index}>
+              {work.href && work.src && (
+                <a href={work.href}>
+                  <img
+                    src={work.src}
+                    alt={work.alt}
+                    width="220"
+                    height="150"
+                    style={{ width: '100%', verticalAlign: 'top' }}
+                  />
+                </a>
+              )}
+            </GridItem>
+          ))}
       </Grid>
     </div>
   );

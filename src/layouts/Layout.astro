@@ -28,5 +28,38 @@ const { title } = Astro.props;
       </div>
       <Footer />
     </div>
+    <style>
+      body {
+        width: 100%;
+        margin: 0;
+        font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+        font-size: 12px;
+        font-weight: lighter;
+        color: var(--color-text-primary);
+        background: var(--color-bg-primary);
+      }
+
+      .Wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;
+        min-height: calc(100vh - 60px);
+        margin: 60px auto 0;
+        background: var(--color-bg);
+      }
+
+      .Main {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 16px;
+        margin: 0 auto;
+        color: var(--color-text-secondary);
+        box-sizing: border-box;
+      }
+    </style>
   </body>
 </html>
