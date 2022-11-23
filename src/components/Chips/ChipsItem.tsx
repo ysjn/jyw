@@ -20,6 +20,7 @@ export const ChipsItem: React.FC<ChipsItemProps> = (props) => {
       setTimeout(() => ref.current?.parentElement?.scrollTo({ left: 0, behavior: 'smooth' }), 0);
     }
   };
+
   return (
     <div className={className} ref={ref}>
       <input

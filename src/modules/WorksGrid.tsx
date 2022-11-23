@@ -4,7 +4,7 @@ import { Grid } from '@components/Grid/Grid';
 import { GridItem } from '@components/Grid/GridItem';
 
 import { WORKS, FILTERS } from 'lib/constants';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const WorksGrid: React.FC<{
   divider?: boolean;
@@ -14,7 +14,18 @@ export const WorksGrid: React.FC<{
   const [currentFilter, setCurrentFilter] = useState<string[]>([]);
   const [animate, setAnimate] = useState(false);
 
-  const onClick = (index: number) => {
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [gridHeight, setGridHeight] = useState<number | undefined>();
+
+  const resizeTimer = useRef(0);
+  const resizeHandler = () => {
+    window.clearTimeout(resizeTimer.current);
+    resizeTimer.current = window.setTimeout(() => {
+      setGridHeight(gridRef.current?.clientHeight);
+    }, 300);
+  };
+
+  const onClick = (index: number) => () => {
     const newArray = [...checkedArray];
     newArray[index] = !newArray[index];
     setCheckedArray(newArray);
@@ -30,6 +41,16 @@ export const WorksGrid: React.FC<{
     setTimeout(() => setAnimate(true), 0);
   }, [checkedArray]);
 
+  useEffect(() => {
+    setGridHeight(gridRef.current?.clientHeight);
+    window.addEventListener('resize', resizeHandler);
+    () => window.removeEventListener('resize', resizeHandler);
+  }, []);
+
+  const filteredWorks = WORKS.filter((work) =>
+    currentFilter.length ? currentFilter.some((filter) => work.tags?.includes(filter)) : true,
+  ).filter((work) => work.id !== currentId);
+
   return (
     <div
       style={{
@@ -43,18 +64,15 @@ export const WorksGrid: React.FC<{
         {FILTERS.map((filter, index) => (
           <ChipsItem
             value={filter}
-            onClick={() => onClick(index)}
+            onClick={onClick(index)}
             checked={checkedArray[index]}
             key={index}
           />
         ))}
       </Chips>
-      <Grid>
-        {WORKS.filter((work) =>
-          currentFilter.length ? currentFilter.some((filter) => work.tags?.includes(filter)) : true,
-        )
-          .filter((work) => work.id !== currentId)
-          .map((work, index) => (
+      <div style={{ height: gridHeight }}>
+        <Grid ref={gridRef}>
+          {filteredWorks.map((work, index) => (
             <GridItem animate={animate} key={index}>
               {work.href && work.src && (
                 <a href={work.href}>
@@ -69,7 +87,8 @@ export const WorksGrid: React.FC<{
               )}
             </GridItem>
           ))}
-      </Grid>
+        </Grid>
+      </div>
     </div>
   );
 };

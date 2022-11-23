@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { forwardRef } from 'react';
 import styles from './Grid.module.scss';
 
 interface GridProps {
@@ -10,7 +11,7 @@ interface GridProps {
   children: React.ReactNode;
 }
 
-export const Grid: React.FC<GridProps> = (props) => {
+export const Grid = forwardRef<HTMLDivElement, GridProps>((props, ref) => {
   const className = classNames(styles.Grid, {
     [styles.Grid__col2]: props.column === 2,
     [styles.Grid__col4]: props.column === 4 || !props.column,
@@ -21,5 +22,10 @@ export const Grid: React.FC<GridProps> = (props) => {
     [styles.Grid__noBackground]: props.noBackground,
     [styles.Grid__noBorder]: props.noBorder,
   });
-  return <div className={className}>{props.children}</div>;
-};
+
+  return (
+    <div className={className} ref={ref}>
+      {props.children}
+    </div>
+  );
+});

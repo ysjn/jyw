@@ -12,5 +12,6 @@ export const GridItem: React.FC<GridItemProps> = (props) => {
     [styles.Grid__itemNoCentering]: props.noCentering,
     [styles.Grid__itemAnimation]: props.animate,
   });
+
   return <div className={className}>{props.children}</div>;
 };
