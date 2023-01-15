@@ -1,0 +1,10 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Carousel } from '@components/Carousel';
+import { WorksGrid } from '@modules/WorksGrid';
+---
+
+<Layout title="Portfolio">
+  <Carousel client:idle />
+  <WorksGrid client:visible />
+</Layout>

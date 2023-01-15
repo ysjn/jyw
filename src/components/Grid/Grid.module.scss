@@ -1,0 +1,99 @@
+.Grid {
+  display: grid;
+  width: 100%;
+  margin: 16px 0;
+
+  &__col2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__col4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
+    &__col2 {
+      grid-template-columns: repeat(1, 1fr);
+
+      .Grid__col2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__col4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__gap8 {
+    gap: 8px;
+  }
+
+  &__gap16 {
+    gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-secondary);
+
+    &:not(:empty):hover {
+      border: 1px solid var(--color-border-secondary-hover);
+    }
+
+    &:empty::before {
+      color: var(--color-text-tertiary);
+      content: 'n/a';
+    }
+  }
+
+  &__vaStart &__item {
+    align-items: flex-start;
+  }
+
+  &__vaEnd &__item {
+    align-items: flex-end;
+  }
+
+  &__itemNoCentering {
+    display: block;
+  }
+
+  &__noBackground > .Grid__item {
+    background-color: transparent;
+  }
+
+  &__noBorder > .Grid__item {
+    border: none;
+
+    &:not(:empty):hover {
+      border: none;
+    }
+  }
+
+  &__itemAnimation {
+    animation: slide-in-animation 0.3s ease-out both;
+
+    @for $i from 1 through 50 {
+      &:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
+      }
+    }
+
+    @keyframes slide-in-animation {
+      0% {
+        opacity: 0;
+        transform: translateY(10%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

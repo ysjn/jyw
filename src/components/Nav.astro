@@ -1,0 +1,55 @@
+---
+import Logo from '@components/Logo.astro';
+---
+
+<div>
+  <a href="/">
+    <Logo />
+  </a>
+  <nav>
+    <ul>
+      <li>
+        <a href="/about">ABOUT</a>
+      </li>
+      <li>
+        <a href="/works">WORKS</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<style lang="scss">
+  div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+    background: var(--color-bg);
+    box-shadow: 0 1px 8px var(--color-box-shadow-primary);
+    opacity: 0.9;
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    nav ul {
+      display: flex;
+      margin-right: -8px;
+
+      li a {
+        padding: 12px;
+      }
+    }
+  }
+</style>

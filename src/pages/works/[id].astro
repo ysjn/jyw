@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro';
+import WorksContents from '@modules/WorksContents.astro';
+import { WorksGrid } from '@modules/WorksGrid';
+import { WORKS } from 'lib/constants';
+
+const data = WORKS.find((work) => work.id === Astro.params.id);
+
+if (!data) {
+  return Astro.redirect('/404');
+}
+---
+
+<Layout title={`Works. ${data.title}`}>
+  <WorksContents {...data} />
+  <WorksGrid currentId={Astro.params.id?.toString()} divider client:visible />
+</Layout>

@@ -1,0 +1,80 @@
+---
+import 'react-photo-view/dist/react-photo-view.css';
+
+import Badge from '@components/Badge.astro';
+import { Grid } from '@components/Grid/Grid';
+import { GridItem } from '@components/Grid/GridItem';
+import { Markdown } from '@components/Markdown';
+import { PreviewGallery } from '@components/PreviewGallery';
+
+interface GalleryItem {
+  src: string;
+  thSrc: string;
+  alt: string;
+}
+
+interface Video {
+  src: string;
+}
+
+interface Props {
+  id: string;
+  href: string;
+  src: string;
+  alt: string;
+  title: string;
+  descJp: string;
+  descEn: string;
+  siteUrl: string;
+  gallery: GalleryItem[];
+  videos?: Video[];
+  md: string[];
+  tags: string[];
+}
+
+const { props } = Astro;
+---
+
+<Grid column={2} gap={16} vAlign="start" noBackground noBorder>
+  {
+    props.gallery && (
+      <GridItem>
+        <PreviewGallery gallery={props.gallery} client:visible />
+      </GridItem>
+    )
+  }
+  <GridItem>
+    <section class="util-MarginTop--16">
+      <h1 class="util-MarginBottom--32">{props.title}</h1>
+      <p class="util-MarginBottom--16">{props.descJp}</p>
+      <p class="util-MarginBottom--16">{props.descEn}</p>
+      {
+        props.tags && (
+          <p class="util-MarginBottom--16">
+            tags:&nbsp;
+            {props.tags.map((tag: string) => (
+              <Badge>{tag}</Badge>
+            ))}
+          </p>
+        )
+      }
+      {
+        props.siteUrl && (
+          <div class="util-MarginTop--16">
+            <a href={props.siteUrl} target="_blank" rel="noopener noreferrer">
+              サイトを開く / Launch site
+            </a>
+          </div>
+        )
+      }
+    </section>
+  </GridItem>
+</Grid>
+{
+  props.videos?.map((video: any) => (
+    <div class="Video util-AspectRatio--16x9 util-MarginBottom--16">
+      <iframe src={video.src} frameborder="0" allowfullscreen />
+    </div>
+  ))
+}
+{props.md && <Markdown data={props.md} />}
