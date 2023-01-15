@@ -1,8 +1,11 @@
 ---
+import 'react-photo-view/dist/react-photo-view.css';
+
 import Badge from '@components/Badge.astro';
 import { Grid } from '@components/Grid/Grid';
 import { GridItem } from '@components/Grid/GridItem';
 import { Markdown } from '@components/Markdown';
+import { PreviewGallery } from '@components/PreviewGallery';
 
 interface GalleryItem {
   src: string;
@@ -36,13 +39,7 @@ const { props } = Astro;
   {
     props.gallery && (
       <GridItem>
-        <Grid column={2}>
-          {props.gallery.map((image: any) => (
-            <GridItem>
-              <img src={image.thSrc} width="240" height="150" alt={image.alt} />
-            </GridItem>
-          ))}
-        </Grid>
+        <PreviewGallery gallery={props.gallery} client:visible />
       </GridItem>
     )
   }
