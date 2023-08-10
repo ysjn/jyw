@@ -11,7 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^2.3.4",
+    "@astrojs/vercel": "^3.8.0",
     "astro": "^2.10.4",
     "classnames": "^2.3.2",
     "react-markdown": "^8.0.3",
